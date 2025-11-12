@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Web Development - Vernoa</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Vernoa</h1>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Getting Started with Web Development</h1>
+            
+            <p class="post-meta"><strong>Published:</strong> November 12, 2025 | <strong>Reading Time:</strong> 8 minutes</p>
+
+            <aside class="infobox">
+                <h3>Contents</h3>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#html-basics">HTML Basics</a></li>
+                    <li><a href="#css-styling">CSS Styling</a></li>
+                    <li><a href="#javascript-interactivity">JavaScript Interactivity</a></li>
+                    <li><a href="#tools-environment">Tools & Environment</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                    <li><a href="#next-steps">Next Steps</a></li>
+                </ul>
+            </aside>
+
+            <h2 id="introduction">Introduction</h2>
+            <p>Web development is an exciting field that combines creativity with technical skill. Whether you're building personal projects or working on enterprise applications, understanding the fundamentals is crucial. This guide will walk you through the essential technologies and concepts you need to know to start your web development journey.</p>
+
+            <p>The web stack consists of three core technologies:</p>
+            <ul>
+                <li><strong>HTML (HyperText Markup Language):</strong> The structure and content of web pages</li>
+                <li><strong>CSS (Cascading Style Sheets):</strong> The visual styling and layout</li>
+                <li><strong>JavaScript:</strong> Interactive functionality and dynamic behavior</li>
+            </ul>
+
+            <h2 id="html-basics">HTML Basics</h2>
+            <p>HTML is the foundation of all web pages. It provides the semantic structure that organizes content and gives it meaning.</p>
+
+            <h3>Core Concepts</h3>
+            <p>HTML uses tags to define elements. Every tag has a specific purpose:</p>
+            <ul>
+                <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> – Headings (h1 is the most important)</li>
+                <li><code>&lt;p&gt;</code> – Paragraphs of text</li>
+                <li><code>&lt;a&gt;</code> – Hyperlinks</li>
+                <li><code>&lt;img&gt;</code> – Images</li>
+                <li><code>&lt;div&gt;</code> – Container for grouping content</li>
+                <li><code>&lt;ul&gt;</code> / <code>&lt;ol&gt;</code> – Unordered and ordered lists</li>
+            </ul>
+
+            <h3>Semantic HTML</h3>
+            <p>Semantic HTML means using tags that clearly describe their content. Instead of wrapping everything in <code>&lt;div&gt;</code> tags, use meaningful tags like:</p>
+            <ul>
+                <li><code>&lt;header&gt;</code> – Page header</li>
+                <li><code>&lt;nav&gt;</code> – Navigation menu</li>
+                <li><code>&lt;main&gt;</code> – Primary content</li>
+                <li><code>&lt;article&gt;</code> – Self-contained content</li>
+                <li><code>&lt;section&gt;</code> – Thematic grouping</li>
+                <li><code>&lt;footer&gt;</code> – Page footer</li>
+            </ul>
+
+            <p>This approach improves accessibility, SEO, and code readability.</p>
+
+            <h2 id="css-styling">CSS Styling</h2>
+            <p>CSS transforms unstyled HTML into beautiful, visually appealing pages. It controls colors, fonts, spacing, layout, and responsive behavior.</p>
+
+            <h3>CSS Selectors</h3>
+            <p>CSS selectors target HTML elements to apply styles:</p>
+            <ul>
+                <li><code>.class-name</code> – Target by class</li>
+                <li><code>#id-name</code> – Target by ID</li>
+                <li><code>element-name</code> – Target by tag</li>
+                <li><code>[attribute]</code> – Target by attribute</li>
+                <li><code>selector:hover</code> – Target on interaction</li>
+            </ul>
+
+            <h3>Responsive Design</h3>
+            <p>Modern web development requires creating sites that work on all devices. Use media queries to adjust styles based on screen size:</p>
+            <pre><code>@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}</code></pre>
+
+            <p>This ensures your site looks great on phones, tablets, and desktops.</p>
+
+            <h2 id="javascript-interactivity">JavaScript Interactivity</h2>
+            <p>While HTML provides structure and CSS provides styling, JavaScript brings interactivity and dynamic behavior to web pages.</p>
+
+            <h3>JavaScript Basics</h3>
+            <p>JavaScript can manipulate the DOM (Document Object Model), respond to user events, and communicate with servers:</p>
+            <ul>
+                <li><strong>Variables:</strong> Store data with <code>let</code>, <code>const</code>, or <code>var</code></li>
+                <li><strong>Functions:</strong> Reusable blocks of code</li>
+                <li><strong>Events:</strong> Respond to user interactions (click, hover, type)</li>
+                <li><strong>DOM Manipulation:</strong> Change HTML and CSS dynamically</li>
+            </ul>
+
+            <h3>Common Patterns</h3>
+            <p>Many web interactions follow common patterns. Learn these fundamentals:</p>
+            <ul>
+                <li>Form validation</li>
+                <li>Fetching data from APIs</li>
+                <li>Event handling</li>
+                <li>Conditional logic</li>
+                <li>Loops and iteration</li>
+            </ul>
+
+            <h2 id="tools-environment">Tools & Environment</h2>
+            <p>To be productive as a web developer, you'll need the right tools:</p>
+
+            <h3>Essential Tools</h3>
+            <ul>
+                <li><strong>Code Editor:</strong> VS Code, Sublime Text, or WebStorm</li>
+                <li><strong>Browser DevTools:</strong> Chrome, Firefox, Safari all have excellent development tools</li>
+                <li><strong>Version Control:</strong> Git and GitHub for managing code</li>
+                <li><strong>Package Manager:</strong> npm or yarn for managing dependencies</li>
+                <li><strong>Task Runner:</strong> Webpack, Vite, or Gulp for build automation</li>
+            </ul>
+
+            <h3>Setting Up Your Environment</h3>
+            <p>Start simple with just a text editor and browser. As you progress, gradually introduce build tools and frameworks. Don't overwhelm yourself early on – focus on mastering fundamentals first.</p>
+
+            <h2 id="best-practices">Best Practices</h2>
+            <p>Professional web developers follow established best practices:</p>
+
+            <h3>Code Quality</h3>
+            <ul>
+                <li><strong>Readability:</strong> Write clean, understandable code</li>
+                <li><strong>DRY Principle:</strong> Don't Repeat Yourself – reuse code</li>
+                <li><strong>Comments:</strong> Document complex logic</li>
+                <li><strong>Naming:</strong> Use descriptive variable and function names</li>
+            </ul>
+
+            <h3>Performance</h3>
+            <ul>
+                <li>Minimize file sizes</li>
+                <li>Optimize images</li>
+                <li>Cache resources efficiently</li>
+                <li>Use lazy loading for images and content</li>
+            </ul>
+
+            <h3>Accessibility</h3>
+            <ul>
+                <li>Use semantic HTML</li>
+                <li>Provide alt text for images</li>
+                <li>Ensure proper color contrast</li>
+                <li>Make navigation keyboard accessible</li>
+            </ul>
+
+            <h2 id="next-steps">Next Steps</h2>
+            <p>Now that you understand the fundamentals, here's a recommended learning path:</p>
+
+            <ol>
+                <li><strong>Master HTML:</strong> Learn all semantic tags and structure</li>
+                <li><strong>Deep-dive CSS:</strong> Understand layout, flexbox, grid, and responsive design</li>
+                <li><strong>JavaScript Fundamentals:</strong> Variables, functions, loops, and DOM manipulation</li>
+                <li><strong>Practice Projects:</strong> Build real projects to apply your knowledge</li>
+                <li><strong>Frameworks:</strong> Once comfortable, explore React, Vue, or Angular</li>
+                <li><strong>Backend:</strong> Learn about servers, databases, and APIs</li>
+            </ol>
+
+            <p>Remember: web development is a journey. Focus on consistent practice and continuous learning. Every expert was once a beginner!</p>
+
+            <div class="infobox">
+                <h3>Resources</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                    <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a></li>
+                </ul>
+            </div>
+
+            <hr style="margin: 2em 0; border: none; border-top: 1px solid #e0e0e0;">
+
+            <p style="text-align: center; color: #666;">
+                <a href="../index.html">← Back to Home</a> | 
+                <a href="post-2.html">Next Article →</a>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vernoa. All rights reserved.</p>
+        <p><a href="../index.html">Home</a> | <a href="../about.html">About</a> | <a href="../contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>
