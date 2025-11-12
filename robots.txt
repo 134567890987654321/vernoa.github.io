@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vernoa.github.io/sitemap.xml
