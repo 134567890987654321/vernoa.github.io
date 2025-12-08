@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sampling Distributions - A comprehensive quick reference guide for statistics including the Central Limit Theorem, sample means, and proportions.">
+    <meta name="keywords" content="statistics, sampling, distributions, CLT, central limit theorem">
+    <meta name="author" content="Vernoa">
+    <meta name="robots" content="index, follow">
+    
+    <title>Sampling Distributions - Vernoa</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="canonical" href="https://vernoa.github.io/notes/ap-stats/">
+    <style>
+        /* Additional custom styles for formula readability */
+        .formula-box {
+            background: #f6f6f6;
+            padding: 1rem;
+            border-left: 4px solid #0645ad;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .math {
+            font-style: italic;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 1em;
+            margin: 2em 0;
+            flex-wrap: wrap;
+        }
+        .nav-buttons a {
+            padding: 0.75em 1.5em;
+            background-color: #f6f6f6;
+            border: 1px solid #a7d7f9;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #0645ad;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .nav-buttons a:hover {
+            background-color: #e8f0ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Vernoa</h1>
+            <ul>
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>📈 Sampling Distributions: Essential Notes</h1>
+
+            <p>A comprehensive quick reference guide for sampling distributions, covering the Central Limit Theorem, sample means, proportions, and practical applications for statistics.</p>
+
+            <section>
+                <h2>I. Sample Mean (x̄)</h2>
+                <p>The distribution of sample means follows the Central Limit Theorem (CLT) under the necessary conditions.</p>
+
+                <h3>Conditions for Use:</h3>
+                <ul>
+                    <li><strong>Randomization:</strong> The sample must be a <strong>simple random sample (SRS)</strong> or obtained through a robust randomization process.</li>
+                    <li><strong>Independence (10% Condition):</strong> The sample size n must be no more than 10% of the population size N (n ≤ 0.10N).</li>
+                </ul>
+
+                <h3>Formulas:</h3>
+                <div class="formula-box">
+                    <strong>Mean:</strong> <span class="math">μ<sub><span style="text-decoration:overline">x</span></sub> = μ</span> (Population Mean)
+                </div>
+                <div class="formula-box">
+                    <strong>Standard Deviation (SD):</strong> <span class="math">σ<sub><span style="text-decoration:overline">x</span></sub> = σ/√n</span>
+                </div>
+
+                <h3>Conditions for Normality:</h3>
+                <ul>
+                    <li><strong>Population is Normal</strong> OR</li>
+                    <li><strong>Central Limit Theorem (CLT):</strong> The sample size <em>n</em> is <strong>large</strong> (typically <em>n</em> ≥ 30).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>II. Sample Proportion (p̂)</h2>
+                <p>This distribution is used for binary (yes/no) data and is modeled by the Normal distribution when conditions are met.</p>
+
+                <h3>Conditions for Use:</h3>
+                <ul>
+                    <li><strong>Randomization:</strong> The sample must be a <strong>simple random sample (SRS)</strong>.</li>
+                    <li><strong>Independence (10% Condition):</strong> The sample size n must be no more than 10% of the population size N (n ≤ 0.10N).</li>
+                </ul>
+
+                <h3>Formulas:</h3>
+                <div class="formula-box">
+                    <strong>Mean:</strong> <span class="math">μ<sub><span style="text-decoration:overline">p</span></sub> = p</span> (Population Proportion)
+                </div>
+                <div class="formula-box">
+                    <strong>Standard Deviation (SD):</strong> <span class="math">σ<sub><span style="text-decoration:overline">p</span></sub> = √[p(1-p)/n]</span>
+                </div>
+
+                <h3>Conditions for Normality:</h3>
+                <ul>
+                    <li><strong>Success/Failure Condition:</strong> <em>np</em> ≥ 10 <strong>AND</strong> <em>n</em>(1-<em>p</em>) ≥ 10.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>III. Difference in Sample Means (x̄₁ - x̄₂)</h2>
+                <p>This is used for comparing the means of two independent groups.</p>
+
+                <h3>Conditions for Use:</h3>
+                <ul>
+                    <li><strong>Randomization:</strong> Both samples must be <strong>simple random samples (SRS)</strong> from their respective populations.</li>
+                    <li><strong>Independence:</strong> 
+                        <ul>
+                            <li><strong>Within Samples:</strong> Both samples must satisfy the <strong>10% Condition</strong> for their respective populations.</li>
+                            <li><strong>Between Samples:</strong> The two samples must be <strong>independent</strong> of each other.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Formulas:</h3>
+                <div class="formula-box">
+                    <strong>Mean:</strong> <span class="math">μ<sub><span style="text-decoration:overline">x</span><sub>1</sub> - <span style="text-decoration:overline">x</span><sub>2</sub></sub> = μ<sub>1</sub> - μ<sub>2</sub></span>
+                </div>
+                <div class="formula-box">
+                    <strong>Standard Deviation (SD):</strong> <span class="math">σ<sub><span style="text-decoration:overline">x</span><sub>1</sub> - <span style="text-decoration:overline">x</span><sub>2</sub></sub> = √[σ<sub>1</sub><sup>2</sup>/n<sub>1</sub> + σ<sub>2</sub><sup>2</sup>/n<sub>2</sub>]</span>
+                </div>
+
+                <h3>Conditions for Normality:</h3>
+                <ul>
+                    <li>Both samples must meet the normality condition for a single mean (i.e., <strong>n₁ ≥ 30 AND n₂ ≥ 30</strong> OR both populations are normal).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>IV. Difference in Sample Proportions (p̂₁ - p̂₂)</h2>
+                <p>This is used for comparing the proportions from two independent groups.</p>
+
+                <h3>Conditions for Use:</h3>
+                <ul>
+                    <li><strong>Randomization:</strong> Both samples must be <strong>simple random samples (SRS)</strong>.</li>
+                    <li><strong>Independence:</strong> 
+                        <ul>
+                            <li><strong>Within Samples:</strong> Both samples must satisfy the <strong>10% Condition</strong> for their respective populations.</li>
+                            <li><strong>Between Samples:</strong> The two samples must be <strong>independent</strong> of each other.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Formulas:</h3>
+                <div class="formula-box">
+                    <strong>Mean:</strong> <span class="math">μ<sub><span style="text-decoration:overline">p</span><sub>1</sub> - <span style="text-decoration:overline">p</span><sub>2</sub></sub> = p<sub>1</sub> - p<sub>2</sub></span>
+                </div>
+                <div class="formula-box">
+                    <strong>Standard Deviation (SD):</strong> <span class="math">σ<sub><span style="text-decoration:overline">p</span><sub>1</sub> - <span style="text-decoration:overline">p</span><sub>2</sub></sub> = √[p<sub>1</sub>(1-p<sub>1</sub>)/n<sub>1</sub> + p<sub>2</sub>(1-p<sub>2</sub>)/n<sub>2</sub>]</span>
+                </div>
+
+                <h3>Conditions for Normality:</h3>
+                <ul>
+                    <li><strong>Success/Failure Condition for Both:</strong> All four conditions must be met: n₁p₁ ≥ 10, n₁(1-p₁) ≥ 10, <strong>AND</strong> n₂p₂ ≥ 10, n₂(1-p₂) ≥ 10.</li>
+                </ul>
+            </section>
+
+            <div class="nav-buttons">
+                <a href="index.html">← Back to AP Statistics</a>
+                <a href="../ap-macro/">View AP Macro →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vernoa. All rights reserved.</p>
+        <p><a href="../../../index.html">Home</a> | <a href="../../about.html">About</a> | <a href="../../contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>
