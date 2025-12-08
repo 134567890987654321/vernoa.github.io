@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Macro - Fiscal Policy Cheat Sheet</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for consistency with previous document */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .highlight-box {
+            background: #f0f7ff; /* Light blue background */
+            padding: 1rem;
+            border-left: 4px solid #3b82f6; /* Blue border */
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+        .logic-chain {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: #1e3a8a; /* darker blue */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 p-4 md:p-8">
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-xl shadow-2xl">
+
+        <header>
+            <h1 class="text-center text-3xl md:text-4xl font-extrabold text-blue-900 border-b-4 border-blue-500 pb-3 mb-8">
+                🏛️ Fiscal Policy: AP Macro Cheat-Sheet
+            </h1>
+            <p class="text-center text-gray-500 italic mb-10">Everything College-Board can test; no fluff.</p>
+        </header>
+
+        <!-- 1. Definition -->
+        <section class="mb-8">
+            <h2 class="text-xl font-bold text-blue-700 mb-2 uppercase tracking-wide">1. Definition</h2>
+            <div class="bg-gray-50 p-6 rounded-lg border-l-8 border-gray-400">
+                <p class="text-gray-800 text-base leading-relaxed">
+                    <strong>Fiscal Policy</strong> = deliberate changes in:
+                    <br><br>(a) <strong>Government Purchases (G)</strong>
+                    <br>(b) <strong>Net Taxes (T)</strong>
+                    <br><br>made by the federal government to influence AD, output, employment, and the price level.
+                </p>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <!-- 2. Types & Direction -->
+            <section>
+                <h2 class="text-xl font-bold text-blue-700 mb-2 uppercase tracking-wide">2. Types & Direction</h2>
+                <ul class="space-y-3 text-gray-700">
+                    <li>
+                        <span class="font-bold text-green-600">Expansionary</span> (G↑ or T↓):
+                        <div class="logic-chain text-sm mt-1">AD↑ → Real GDP↑, UE↓, PL↑</div>
+                    </li>
+                    <li>
+                        <span class="font-bold text-red-600">Contractionary</span> (G↓ or T↑):
+                        <div class="logic-chain text-sm mt-1">AD↓ → Real GDP↓, UE↑, PL↓</div>
+                    </li>
+                    <li class="pt-2 text-sm border-t border-gray-200">
+                        <strong>Discretionary:</strong> New legislative action.
+                    </li>
+                    <li class="text-sm">
+                        <strong>Automatic Stabilizers:</strong> Existing rules (progressive tax, UE benefits) that swing budget toward deficit in recession & surplus in expansion.
+                    </li>
+                </ul>
+                
+            </section>
+
+            <!-- 3. Multipliers -->
+            <section>
+                <h2 class="text-xl font-bold text-blue-700 mb-2 uppercase tracking-wide">3. Multipliers</h2>
+                <p class="text-xs text-gray-500 mb-2">Short-run Keynesian model; no PL change</p>
+                <div class="space-y-2">
+                    <div class="highlight-box">
+                        Govt Multiplier = 1 / (1 – MPC)
+                    </div>
+                    <div class="highlight-box">
+                        Tax Multiplier = –MPC / (1 – MPC)
+                    </div>
+                    <div class="highlight-box">
+                        Balanced-Budget Mult. = 1
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    <strong>Shift:</strong> AD moves horizontally by <br><em>(multiplier × initial fiscal shock)</em>.
+                </p>
+            </section>
+        </div>
+
+        <!-- Automatic Stabilizers - Full Width Block -->
+        <section class="mb-8 bg-gradient-to-r from-red-50 via-white to-green-50 p-0 rounded-lg border-2 border-gray-300 shadow-md">
+            <h2 class="text-2xl font-bold text-blue-700 uppercase tracking-wider px-8 pt-6 pb-4">Automatic Stabilizers Logic</h2>
+            <div class="grid grid-cols-2 gap-0 border-t-2 border-gray-300">
+                <!-- Boom Block -->
+                <div class="bg-red-50 p-8 border-r-2 border-gray-300 border-l-8 border-red-600">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-4xl">🔴</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-red-700">Economic Boom</h3>
+                            <p class="text-sm text-red-600 font-semibold">(Overheating)</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded border-l-4 border-red-400">
+                            <div class="font-bold text-gray-900 mb-2">Starting Condition:</div>
+                            <div class="font-mono text-sm text-gray-700 space-y-1">
+                                <div>Real GDP ↑</div>
+                                <div>Unemployment ↓</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl font-bold text-red-600">→</span>
+                            <div class="bg-white p-4 rounded border-l-4 border-red-400 flex-1">
+                                <div class="font-bold text-gray-900 mb-2">Government Transfers ↓</div>
+                                <div class="text-sm text-gray-700">Fewer people qualify for unemployment benefits, welfare payments, food stamps, etc.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl font-bold text-red-600">→</span>
+                            <div class="bg-white p-4 rounded border-l-4 border-red-400 flex-1">
+                                <div class="font-bold text-gray-900 mb-2">Tax Revenue ↑</div>
+                                <div class="text-sm text-gray-700">Higher incomes push people into higher tax brackets. More people working = more income tax collected.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl font-bold text-red-600">→</span>
+                            <div class="bg-white p-4 rounded border-l-4 border-red-400 flex-1">
+                                <div class="font-bold text-gray-900 mb-2">Budget Deficit ↓</div>
+                                <div class="text-sm text-gray-700">Balance = T – G – TR improves automatically.</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-red-100 p-5 rounded-lg border-2 border-red-600 mt-4">
+                            <div class="font-bold text-red-800 text-xl">RESULT:</div>
+                            <div class="font-bold text-red-800 text-lg">CONTRACTIONARY</div>
+                            <div class="text-sm text-red-700 mt-2">Dampens the boom</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recession Block -->
+                <div class="bg-green-50 p-8 border-l-8 border-green-600">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-4xl">🟢</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-green-700">Recession</h3>
+                            <p class="text-sm text-green-600 font-semibold">(Underheating)</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded border-l-4 border-green-400">
+                            <div class="font-bold text-gray-900 mb-2">Starting Condition:</div>
+                            <div class="font-mono text-sm text-gray-700 space-y-1">
+                                <div>Real GDP ↓</div>
+                                <div>Unemployment ↑</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl font-bold text-green-600">→</span>
+                            <div class="bg-white p-4 rounded border-l-4 border-green-400 flex-1">
+                                <div class="font-bold text-gray-900 mb-2">Government Transfers ↑</div>
+                                <div class="text-sm text-gray-700">More people qualify for unemployment benefits, welfare, food stamps, disability. Gov't pays out more automatically.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl font-bold text-green-600">→</span>
+                            <div class="bg-white p-4 rounded border-l-4 border-green-400 flex-1">
+                                <div class="font-bold text-gray-900 mb-2">Tax Revenue ↓</div>
+                                <div class="text-sm text-gray-700">Lower incomes push people into lower tax brackets. Fewer people working = less income tax collected.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-2xl font-bold text-green-600">→</span>
+                            <div class="bg-white p-4 rounded border-l-4 border-green-400 flex-1">
+                                <div class="font-bold text-gray-900 mb-2">Budget Deficit ↑</div>
+                                <div class="text-sm text-gray-700">Balance = T – G – TR worsens automatically.</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-100 p-5 rounded-lg border-2 border-green-600 mt-4">
+                            <div class="font-bold text-green-800 text-xl">RESULT:</div>
+                            <div class="font-bold text-green-800 text-lg">EXPANSIONARY</div>
+                            <div class="text-sm text-green-700 mt-2">Supports the economy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-blue-50 px-8 py-5 border-t-2 border-gray-300 rounded-b-lg">
+                <strong class="text-blue-800 block mb-2">💡 Key Takeaway:</strong>
+                <p class="text-sm text-gray-700">
+                    Automatic stabilizers happen <strong>WITHOUT Congress voting</strong>. Built into existing tax code & benefit rules. They stabilize by design, without discretionary action. Much faster than discretionary fiscal policy (no lags).
+                </p>
+            </div>
+        </section>
+
+        <hr class="border-gray-300 my-6">
+
+        <!-- 4. Output & Employment -->
+        <section class="mb-8">
+            <h2 class="text-xl font-bold text-blue-700 mb-2 uppercase tracking-wide">4. Output & Employment</h2>
+            <div class="bg-blue-50 p-4 rounded text-gray-800">
+                <p class="mb-2"><strong>Recessionary Gap (Y < Yf):</strong> Use Expansionary Policy.</p>
+                <p class="font-mono bg-white inline-block px-2 py-1 rounded border border-blue-200">
+                    ΔG needed = (Yf – Ycurrent) / Govt. Multiplier
+                </p>
+                <p class="mt-2 text-sm text-gray-600">Same logic applies to Inflationary Gap (reversed).</p>
+            </div>
+        </section>
+
+        <!-- 5. Budget Balances -->
+        <section class="mb-8">
+            <h2 class="text-xl font-bold text-blue-700 mb-2 uppercase tracking-wide">5. Budget Balances</h2>
+            <p class="text-gray-700 mb-2"><strong>Balance = T – G – TR</strong> (TR = Transfers)</p>
+            <ul class="list-disc ml-5 text-gray-700 space-y-1">
+                <li><strong>Deficit:</strong> Negative balance</li>
+                <li><strong>Surplus:</strong> Positive balance</li>
+                <li><strong>Cyclically-adjusted balance:</strong> Removes business-cycle effects to show the true stance of discretionary policy.</li>
+            </ul>
+        </section>
+
+        <!-- 6. Crowding Out & 7. Supply Side -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <section>
+                <h2 class="text-xl font-bold text-blue-700 mb-2 uppercase tracking-wide">6. Crowding Out</h2>
+                <p class="text-xs text-gray-500 mb-1">(Medium/Long Run)</p>
+                <div class="highlight-box text-sm">
+                    G↑ or T↓ → Loan Demand↑ → r↑ → I↓ (and Xn↓)
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    Fiscal stimulus is partially or completely offset by reduced Investment (I). Effect is larger if capital is mobile.
+                </p>
+            </section>
+            
+            <section>
+                <h2 class="text-xl font-bold text-blue-700 mb-2 uppercase tracking-wide">7. Supply-Side Effects</h2>
+                <div class="bg-green-50 p-4 rounded border-l-4 border-green-400">
+                    <p class="text-gray-700 text-sm">
+                        Lower marginal tax rates can raise potential GDP by increasing labor supply, saving & productivity.
+                    </p>
+                    <p class="font-bold text-green-800 mt-2">→ Rightward shift of LRAS</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- 8 & 9. Ricardian & Debt -->
+        <section class="mb-8 bg-gray-50 p-4 rounded-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-bold text-gray-800">8. Ricardian Equivalence</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                        If households view today's deficit as tomorrow's taxes, they save the tax cut → <strong>AD unchanged</strong>.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-gray-800">9. Debt & Sustainability</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                        <strong>Debt-to-GDP</strong> = (Debt / Nominal GDP) × 100. Persistent deficits raise this ratio, risking higher future taxes or default premiums.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 10. Problems: The Three Lags (New Section) -->
+        <section class="mb-8">
+            <h2 class="text-xl font-bold text-blue-700 mb-2 uppercase tracking-wide">10. Problems: The Three Lags</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-red-50 p-3 rounded border border-red-100">
+                    <strong class="block text-red-800 mb-1">1. Recognition Lag</strong>
+                    <p class="text-sm text-gray-700">The time it takes to realize a recession or inflation is actually happening (due to data delays).</p>
+                </div>
+                <div class="bg-red-50 p-3 rounded border border-red-100">
+                    <strong class="block text-red-800 mb-1">2. Administrative Lag</strong>
+                    <p class="text-sm text-gray-700">The time it takes for Congress/President to agree on and pass the new legislation (politics).</p>
+                </div>
+                <div class="bg-red-50 p-3 rounded border border-red-100">
+                    <strong class="block text-red-800 mb-1">3. Operational Lag</strong>
+                    <p class="text-sm text-gray-700">The time it takes for the spending to actually affect the economy (planning, building, etc.).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Summary Table -->
+        <section class="mb-10">
+            <h2 class="text-xl font-bold text-blue-700 mb-4 uppercase tracking-wide">11. AP "Toolkit" Summary</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-300">
+                    <thead class="bg-blue-100 text-blue-900">
+                        <tr>
+                            <th class="py-2 px-4 border-b text-left">Policy</th>
+                            <th class="py-2 px-4 border-b text-left">Tool</th>
+                            <th class="py-2 px-4 border-b text-center">AD Shift</th>
+                            <th class="py-2 px-4 border-b text-center">UE</th>
+                            <th class="py-2 px-4 border-b text-center">PL</th>
+                            <th class="py-2 px-4 border-b text-center">Deficit</th>
+                            <th class="py-2 px-4 border-b text-left">Crowding</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="py-2 px-4 font-bold text-green-700">Expansionary</td>
+                            <td class="py-2 px-4">↑G / ↓T</td>
+                            <td class="py-2 px-4 text-center">Right</td>
+                            <td class="py-2 px-4 text-center">↓</td>
+                            <td class="py-2 px-4 text-center">↑</td>
+                            <td class="py-2 px-4 text-center">↑</td>
+                            <td class="py-2 px-4 text-sm">Possible</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-2 px-4 font-bold text-red-700">Contractionary</td>
+                            <td class="py-2 px-4">↓G / ↑T</td>
+                            <td class="py-2 px-4 text-center">Left</td>
+                            <td class="py-2 px-4 text-center">↑</td>
+                            <td class="py-2 px-4 text-center">↓</td>
+                            <td class="py-2 px-4 text-center">↓</td>
+                            <td class="py-2 px-4 text-sm">—</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 12. Graphs -->
+        <section class="mb-6 border-t-2 border-dashed border-gray-300 pt-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-2">12. Graphs You Must Draw</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div class="bg-white border border-gray-200 p-3 rounded shadow-sm">
+                    <strong class="block text-blue-600 mb-1">AD–SRAS–LRAS</strong>
+                    Show gap, fiscal shift (AD moves), new PL & Y.
+                </div>
+                <div class="bg-white border border-gray-200 p-3 rounded shadow-sm">
+                    <strong class="block text-blue-600 mb-1">Loanable Funds</strong>
+                    Deficit implies Demand for funds ↑ → Interest Rate (r) ↑.
+                </div>
+                <div class="bg-white border border-gray-200 p-3 rounded shadow-sm">
+                    <strong class="block text-blue-600 mb-1">Phillips Curve (Short Run)</strong>
+                    Fiscal policy causes movement <em>along</em> SRPC. LRPC is vertical.
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-12 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
+            AP Macro Fiscal Policy Cheat-Sheet • Memorize the Multipliers!
+        </footer>
+    </div>
+</body>
+</html>
