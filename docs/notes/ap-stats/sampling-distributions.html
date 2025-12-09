@@ -12,20 +12,6 @@
     <link rel="stylesheet" href="../../styles.css">
     <link rel="canonical" href="https://vernoa.github.io/notes/ap-stats/">
     <style>
-        /* Additional custom styles for formula readability */
-        .formula-box {
-            background: #fff;
-            padding: 1rem;
-            border-left: 4px solid #0645ad;
-            margin: 1rem 0;
-            font-family: 'Courier New', monospace;
-            font-size: 1.1em;
-            border-radius: 0.25rem;
-            /* inner shadow removed; panel outer surround is used */
-        }
-        .math {
-            font-style: italic;
-        }
         .nav-buttons {
             display: flex;
             gap: 1em;
@@ -38,7 +24,6 @@
             border: 1px solid var(--panel-border);
             border-radius: 6px;
             box-shadow: 0 0 0 3px var(--panel-accent-blue);
-            border-radius: 4px;
             text-decoration: none;
             color: #0645ad;
             font-weight: 500;
@@ -48,6 +33,7 @@
             background-color: var(--primary-hover);
             color: white;
         }
+        .math { font-style: italic; }
     </style>
 </head>
 <body>
@@ -79,10 +65,10 @@
                 </ul>
 
                 <h3>Formulas:</h3>
-                <div class="formula-box">
+                <div class="formula-box panel">
                     <strong>Mean:</strong> <span class="math">μ<sub><span style="text-decoration:overline">x</span></sub> = μ</span> (Population Mean)
                 </div>
-                <div class="formula-box">
+                <div class="formula-box panel">
                     <strong>Standard Deviation (SD):</strong> <span class="math">σ<sub><span style="text-decoration:overline">x</span></sub> = σ/√n</span>
                 </div>
 
@@ -104,10 +90,10 @@
                 </ul>
 
                 <h3>Formulas:</h3>
-                <div class="formula-box">
+                <div class="formula-box panel">
                     <strong>Mean:</strong> <span class="math">μ<sub><span style="text-decoration:overline">p</span></sub> = p</span> (Population Proportion)
                 </div>
-                <div class="formula-box">
+                <div class="formula-box panel">
                     <strong>Standard Deviation (SD):</strong> <span class="math">σ<sub><span style="text-decoration:overline">p</span></sub> = √[p(1-p)/n]</span>
                 </div>
 
@@ -133,10 +119,10 @@
                 </ul>
 
                 <h3>Formulas:</h3>
-                <div class="formula-box">
+                <div class="formula-box panel">
                     <strong>Mean:</strong> <span class="math">μ<sub><span style="text-decoration:overline">x</span><sub>1</sub> - <span style="text-decoration:overline">x</span><sub>2</sub></sub> = μ<sub>1</sub> - μ<sub>2</sub></span>
                 </div>
-                <div class="formula-box">
+                <div class="formula-box panel">
                     <strong>Standard Deviation (SD):</strong> <span class="math">σ<sub><span style="text-decoration:overline">x</span><sub>1</sub> - <span style="text-decoration:overline">x</span><sub>2</sub></sub> = √[σ<sub>1</sub><sup>2</sup>/n<sub>1</sub> + σ<sub>2</sub><sup>2</sup>/n<sub>2</sub>]</span>
                 </div>
 
@@ -162,10 +148,10 @@
                 </ul>
 
                 <h3>Formulas:</h3>
-                <div class="formula-box">
+                <div class="formula-box panel">
                     <strong>Mean:</strong> <span class="math">μ<sub><span style="text-decoration:overline">p</span><sub>1</sub> - <span style="text-decoration:overline">p</span><sub>2</sub></sub> = p<sub>1</sub> - p<sub>2</sub></span>
                 </div>
-                <div class="formula-box">
+                <div class="formula-box panel">
                     <strong>Standard Deviation (SD):</strong> <span class="math">σ<sub><span style="text-decoration:overline">p</span><sub>1</sub> - <span style="text-decoration:overline">p</span><sub>2</sub></sub> = √[p<sub>1</sub>(1-p<sub>1</sub>)/n<sub>1</sub> + p<sub>2</sub>(1-p<sub>2</sub>)/n<sub>2</sub>]</span>
                 </div>
 

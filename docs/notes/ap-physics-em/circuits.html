@@ -7,74 +7,13 @@
     <meta name="keywords" content="circuits, KCL, KVL, Kirchhoff, circuit analysis, current, voltage, resistance, physics">
     <meta name="author" content="Vernoa">
     <meta name="robots" content="index, follow">
-    
+
     <title>Circuits: KCL, KVL, and Analysis - Vernoa</title>
     <link rel="stylesheet" href="../../styles.css">
     <link rel="canonical" href="https://vernoa.github.io/notes/ap-physics-em/circuits/">
     <style>
-        .highlight-box {
-            background: #fff;
-            padding: 1rem;
-            border-left: 4px solid #0645ad;
-            margin: 0.5rem 0;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95rem;
-            border-radius: 0.25rem;
-            /* inner shadow removed in favor of .panel surround */
-        }
-        .example-box {
-            background: #fff;
-            padding: 1rem;
-            border-left: 4px solid #228B22;
-            margin: 1rem 0;
-            border-radius: 0.25rem;
-        }
-        .formula-box {
-            background: #fff;
-            padding: 1rem;
-            border-left: 4px solid #ff9800;
-            margin: 0.5rem 0;
-            font-family: 'Courier New', monospace;
-            border-radius: 0.25rem;
-        }
-        .nav-buttons {
-            display: flex;
-            gap: 1em;
-            margin: 2em 0;
-            flex-wrap: wrap;
-        }
-        .nav-buttons a {
-            padding: 0.5em 1em;
-            background-color: #fff;
-            border: 1px solid var(--panel-border);
-            border-radius: 6px;
-            box-shadow: 0 0 0 3px var(--panel-accent-blue);
-            border-radius: 4px;
-            text-decoration: none;
-            color: #0645ad;
-            font-weight: 500;
-            transition: background-color 0.2s;
-        }
-        .nav-buttons a:hover {
-            background-color: var(--primary-hover);
-            color: white;
-        }
         .parameter-list {
             margin-left: 1.5rem;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1em 0;
-        }
-        table th, table td {
-            border: 1px solid #cccccc;
-            padding: 0.75em;
-            text-align: left;
-        }
-        table th {
-            background-color: #fff;
-            font-weight: 600;
         }
     </style>
 </head>
@@ -98,8 +37,8 @@
             <section>
                 <h2>1. Ohm's Law</h2>
                 <p><strong>Definition:</strong> The relationship between voltage, current, and resistance in a circuit element.</p>
-                
-                <div class="formula-box panel panel--orange">
+
+                <div class="formula-box panel">
                     V = IR<br>
                     I = V/R<br>
                     R = V/I
@@ -113,7 +52,7 @@
                 </div>
 
                 <h3>Example 1: Finding Current</h3>
-                <div class="example-box panel panel--green">
+                <div class="example-box panel">
                     <strong>Problem:</strong> A resistor with resistance 100 Ω has a potential difference of 12 V across it. What is the current?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -127,8 +66,8 @@
             <section>
                 <h2>2. Kirchhoff's Current Law (KCL)</h2>
                 <p><strong>Definition:</strong> The sum of all currents entering a junction equals the sum of all currents leaving that junction. Based on conservation of charge.</p>
-                
-                <div class="formula-box panel panel--orange">
+
+                <div class="formula-box panel">
                     ΣI_in = ΣI_out<br>
                     <br>
                     (At any node: Σ I = 0)
@@ -143,7 +82,7 @@
                 </ul>
 
                 <h3>Example 2: KCL at a Junction</h3>
-                <div class="example-box panel panel--green">
+                <div class="example-box panel">
                     <strong>Problem:</strong> At a junction, 3 A enters from the left and 1 A enters from above. How much current must leave through the right branch?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -158,8 +97,8 @@
             <section>
                 <h2>3. Kirchhoff's Voltage Law (KVL)</h2>
                 <p><strong>Definition:</strong> The sum of all potential differences around any closed loop in a circuit equals zero. Based on conservation of energy.</p>
-                
-                <div class="formula-box panel panel--orange">
+
+                <div class="formula-box panel">
                     ΣV = 0 (around any closed loop)<br>
                     <br>
                     Or: ΣV_emf = ΣV_resistors
@@ -174,7 +113,7 @@
                 </ul>
 
                 <h3>Example 3: Single Loop Circuit (KVL)</h3>
-                <div class="example-box panel panel--green">
+                <div class="example-box panel">
                     <strong>Problem:</strong> A 12 V battery is connected to three resistors in series: 2 Ω, 3 Ω, and 5 Ω. Find the current in the circuit.
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -195,19 +134,19 @@
                 <h2>4. Series and Parallel Resistors</h2>
 
                 <h3>Series Resistors:</h3>
-                <div class="formula-box panel panel--orange">
+                <div class="formula-box panel">
                     R_total = R₁ + R₂ + R₃ + ...<br>
                     (Same current through all resistors)
                 </div>
 
                 <h3>Parallel Resistors:</h3>
-                <div class="formula-box panel panel--orange">
+                <div class="formula-box panel">
                     1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...<br>
                     (Same voltage across all resistors)
                 </div>
 
                 <h3>Example 4: Parallel Resistors</h3>
-                <div class="example-box panel panel--green">
+                <div class="example-box panel">
                     <strong>Problem:</strong> Three resistors of 6 Ω, 3 Ω, and 2 Ω are connected in parallel. What is the equivalent resistance?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -221,8 +160,8 @@
 
             <section>
                 <h2>5. Power in Circuits</h2>
-                
-                <div class="formula-box panel panel--orange">
+
+                <div class="formula-box panel">
                     P = IV = I²R = V²/R<br>
                     <br>
                     E = Pt (energy over time)
@@ -239,7 +178,7 @@
                 </div>
 
                 <h3>Example 5: Power in a Resistor</h3>
-                <div class="example-box panel panel--green">
+                <div class="example-box panel">
                     <strong>Problem:</strong> A 10 W light bulb operates at 120 V. What is the current through it and its resistance?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -267,7 +206,7 @@
                 </ol>
 
                 <h3>Example 6: Two-Loop Circuit</h3>
-                <div class="example-box panel panel--green">
+                <div class="example-box panel">
                     <strong>Problem:</strong> Two batteries (12 V and 8 V) and three resistors (2 Ω, 3 Ω, 4 Ω) form a circuit. Find the current through each resistor.
                     <br><br>
                     <strong>Setup:</strong> (This requires a circuit diagram, but conceptually:)<br>
@@ -285,8 +224,8 @@
 
             <section>
                 <h2>7. Internal Resistance and EMF</h2>
-                
-                <div class="formula-box">
+
+                <div class="formula-box panel">
                     V = ε - Ir (terminal voltage)<br>
                     <br>
                     ε = emf (electromotive force)<br>
@@ -301,7 +240,7 @@
                 </ul>
 
                 <h3>Example 7: Battery with Internal Resistance</h3>
-                <div class="example-box">
+                <div class="example-box panel">
                     <strong>Problem:</strong> A battery with emf 12 V and internal resistance 0.5 Ω is connected to a 5 Ω external resistor. What is the terminal voltage?
                     <br><br>
                     <strong>Solution:</strong><br>
