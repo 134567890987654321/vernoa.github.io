@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Electric Field Formulas - Definitions, equations, parameters, and worked examples for AP Physics C electricity and magnetism.">
+    <meta name="keywords" content="electric field, E field, formulas, physics, AP physics C, worked examples">
+    <meta name="author" content="Vernoa">
+    <meta name="robots" content="index, follow">
+    
+    <title>Electric Field Formulas - Vernoa</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="canonical" href="https://vernoa.github.io/notes/ap-physics-em/electric-field-formulas/">
+    <style>
+        .highlight-box {
+            background: #f6f6f6;
+            padding: 1rem;
+            border-left: 4px solid #0645ad;
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .example-box {
+            background: #f0f8e8;
+            padding: 1rem;
+            border-left: 4px solid #228B22;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+        }
+        .formula-box {
+            background: #fff3cd;
+            padding: 1rem;
+            border-left: 4px solid #ff9800;
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+            border-radius: 0.25rem;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 1em;
+            margin: 2em 0;
+            flex-wrap: wrap;
+        }
+        .nav-buttons a {
+            padding: 0.75em 1.5em;
+            background-color: #f6f6f6;
+            border: 1px solid #a7d7f9;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #0645ad;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .nav-buttons a:hover {
+            background-color: #e8f0ff;
+        }
+        .parameter-list {
+            margin-left: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Vernoa</h1>
+            <ul>
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>⚡ Electric Field Formulas</h1>
+            <p>Complete guide to electric field definitions, formulas, parameters, and worked examples.</p>
+
+            <section>
+                <h2>1. Electric Field Definition</h2>
+                <p><strong>Definition:</strong> The electric field is the force per unit charge. It describes the strength and direction of the electric force that would be exerted on a test charge placed at a point in space.</p>
+                
+                <div class="formula-box">
+                    E = F/q<br>
+                    <br>
+                    <strong>Alternative:</strong> E = kQ/r²
+                </div>
+
+                <h3>Parameters:</h3>
+                <div class="parameter-list">
+                    <p><strong>E</strong> = Electric field strength (N/C or V/m)</p>
+                    <p><strong>F</strong> = Electric force on test charge (N)</p>
+                    <p><strong>q</strong> = Test charge magnitude (C)</p>
+                    <p><strong>k</strong> = Coulomb's constant = 8.99 × 10⁹ N⋅m²/C²</p>
+                    <p><strong>Q</strong> = Source charge creating the field (C)</p>
+                    <p><strong>r</strong> = Distance from source charge (m)</p>
+                </div>
+
+                <h3>Example 1: Finding Electric Field from Force</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A test charge of +2 μC experiences a force of 8 N at a point in an electric field. What is the electric field strength at that point?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    E = F/q = 8 N / (2 × 10⁻⁶ C)<br>
+                    E = 4 × 10⁶ N/C<br>
+                    <br>
+                    The electric field strength is 4 × 10⁶ N/C, pointing in the direction of the force (since the test charge is positive).
+                </div>
+
+                <h3>Example 2: Electric Field from Point Charge</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> What is the electric field at a distance of 0.5 m from a +3 μC point charge?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    E = kQ/r² = (8.99 × 10⁹ N⋅m²/C²)(3 × 10⁻⁶ C) / (0.5 m)²<br>
+                    E = (26.97 × 10³ N⋅m²/C) / 0.25 m²<br>
+                    E = 1.08 × 10⁵ N/C<br>
+                    <br>
+                    The electric field is 1.08 × 10⁵ N/C pointing radially outward from the positive charge.
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Electric Potential Energy</h2>
+                <p><strong>Definition:</strong> The work done to assemble a system of charges from infinity.</p>
+                
+                <div class="formula-box">
+                    U = kQ₁Q₂/r<br>
+                    (for two point charges)
+                </div>
+
+                <h3>Parameters:</h3>
+                <div class="parameter-list">
+                    <p><strong>U</strong> = Electric potential energy (J)</p>
+                    <p><strong>Q₁, Q₂</strong> = Two point charges (C)</p>
+                    <p><strong>r</strong> = Distance between charges (m)</p>
+                    <p><strong>U > 0</strong> = Like charges (repulsive)</p>
+                    <p><strong>U < 0</strong> = Unlike charges (attractive)</p>
+                </div>
+
+                <h3>Example 3: Potential Energy Between Two Charges</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> Two charges (+2 μC and -3 μC) are separated by 0.2 m. What is the electric potential energy?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    U = kQ₁Q₂/r = (8.99 × 10⁹)(2 × 10⁻⁶)(-3 × 10⁻⁶) / 0.2<br>
+                    U = (8.99 × 10⁹)(-6 × 10⁻¹²) / 0.2<br>
+                    U = -0.270 J<br>
+                    <br>
+                    The negative value indicates attractive interaction between unlike charges.
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Electric Potential (Voltage)</h2>
+                <p><strong>Definition:</strong> The electric potential energy per unit charge, or the work done per unit charge to move a charge from infinity.</p>
+                
+                <div class="formula-box">
+                    V = U/q = kQ/r<br>
+                    (for point charge)
+                </div>
+
+                <h3>Parameters:</h3>
+                <div class="parameter-list">
+                    <p><strong>V</strong> = Electric potential (V or J/C)</p>
+                    <p><strong>U</strong> = Electric potential energy (J)</p>
+                    <p><strong>q</strong> = Test charge (C)</p>
+                    <p><strong>Q</strong> = Source charge (C)</p>
+                </div>
+
+                <h3>Example 4: Electric Potential from Point Charge</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> What is the electric potential 0.3 m from a +5 μC charge?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    V = kQ/r = (8.99 × 10⁹ N⋅m²/C²)(5 × 10⁻⁶ C) / 0.3 m<br>
+                    V = (44.95 × 10³ V⋅m) / 0.3 m<br>
+                    V = 1.50 × 10⁵ V = 150 kV<br>
+                    <br>
+                    The electric potential is 150 kV (positive because source charge is positive).
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Relationship Between E Field and Potential</h2>
+                
+                <div class="formula-box">
+                    E = -dV/dr (in general)<br>
+                    E = ΔV/Δx (for uniform field)<br>
+                    E = V/d (uniform field, V = potential difference, d = distance)
+                </div>
+
+                <h3>Key Insight:</h3>
+                <p>The electric field points in the direction of decreasing potential. The stronger the potential gradient, the stronger the electric field.</p>
+
+                <h3>Example 5: E Field from Potential Difference</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A uniform electric field exists between two parallel plates separated by 0.02 m with a potential difference of 500 V. What is the electric field magnitude?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    E = V/d = 500 V / 0.02 m<br>
+                    E = 25,000 N/C = 2.5 × 10⁴ N/C<br>
+                    <br>
+                    The electric field is 25 kN/C pointing from high potential to low potential plate.
+                </div>
+            </section>
+
+            <section>
+                <h2>5. Motion of Charged Particles in Electric Fields</h2>
+                
+                <div class="formula-box">
+                    F = qE<br>
+                    a = qE/m<br>
+                    (Using Newton's second law: F = ma)
+                </div>
+
+                <h3>Parameters:</h3>
+                <div class="parameter-list">
+                    <p><strong>F</strong> = Force on charged particle (N)</p>
+                    <p><strong>q</strong> = Particle charge (C)</p>
+                    <p><strong>E</strong> = Electric field (N/C)</p>
+                    <p><strong>a</strong> = Acceleration of particle (m/s²)</p>
+                    <p><strong>m</strong> = Mass of particle (kg)</p>
+                </div>
+
+                <h3>Example 6: Acceleration of Charged Particle</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> An electron (q = -1.6 × 10⁻¹⁹ C, m = 9.1 × 10⁻³¹ kg) enters a uniform electric field of 5 × 10⁴ N/C. What is the magnitude of its acceleration?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    a = qE/m = (1.6 × 10⁻¹⁹ C)(5 × 10⁴ N/C) / (9.1 × 10⁻³¹ kg)<br>
+                    a = (8 × 10⁻¹⁵ N) / (9.1 × 10⁻³¹ kg)<br>
+                    a = 8.8 × 10¹⁵ m/s²<br>
+                    <br>
+                    The electron experiences an enormous acceleration due to its tiny mass. The direction is opposite to the field (negative charge).
+                </div>
+            </section>
+
+            <section>
+                <h2>Quick Reference: Key Formulas</h2>
+                <div class="highlight-box">
+                    E = F/q = kQ/r²<br>
+                    V = U/q = kQ/r<br>
+                    E = V/d (uniform field)<br>
+                    F = qE<br>
+                    a = qE/m<br>
+                    U = kQ₁Q₂/r
+                </div>
+            </section>
+
+            <div class="nav-buttons">
+                <a href="index.html">← Back to AP Physics EM</a>
+                <a href="circuits.html">View Circuits →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vernoa. All rights reserved.</p>
+        <p><a href="../../../index.html">Home</a> | <a href="../../about.html">About</a> | <a href="../../contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>

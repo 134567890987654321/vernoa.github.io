@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Magnetic Induction & Faraday's Law - Electromagnetic induction, Lenz's Law, induced currents, and generated EMF for AP Physics C.">
+    <meta name="keywords" content="induction, Faraday, Lenz, electromagnetic, induced EMF, induced current, flux change, physics">
+    <meta name="author" content="Vernoa">
+    <meta name="robots" content="index, follow">
+    
+    <title>Magnetic Induction & Faraday's Law - Vernoa</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="canonical" href="https://vernoa.github.io/notes/ap-physics-em/magnetic-induction/">
+    <style>
+        .highlight-box {
+            background: #f6f6f6;
+            padding: 1rem;
+            border-left: 4px solid #0645ad;
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .example-box {
+            background: #f0f8e8;
+            padding: 1rem;
+            border-left: 4px solid #228B22;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+        }
+        .formula-box {
+            background: #fff3cd;
+            padding: 1rem;
+            border-left: 4px solid #ff9800;
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+            border-radius: 0.25rem;
+        }
+        .law-box {
+            background: #ffe6e6;
+            padding: 1rem;
+            border-left: 4px solid #d9534f;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+            font-weight: 500;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 1em;
+            margin: 2em 0;
+            flex-wrap: wrap;
+        }
+        .nav-buttons a {
+            padding: 0.75em 1.5em;
+            background-color: #f6f6f6;
+            border: 1px solid #a7d7f9;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #0645ad;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .nav-buttons a:hover {
+            background-color: #e8f0ff;
+        }
+        .parameter-list {
+            margin-left: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Vernoa</h1>
+            <ul>
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>✨ Magnetic Induction & Faraday's Law</h1>
+            <p>Complete guide to electromagnetic induction, Faraday's Law, Lenz's Law, and induced currents.</p>
+
+            <section>
+                <h2>1. Magnetic Flux</h2>
+                <p><strong>Definition:</strong> The measure of magnetic field passing through a surface.</p>
+                
+                <div class="formula-box">
+                    Φ = BA cos(θ)<br>
+                    <br>
+                    Φ = ∫B·dA (general form)
+                </div>
+
+                <h3>Parameters:</h3>
+                <div class="parameter-list">
+                    <p><strong>Φ</strong> = Magnetic flux (Wb or T⋅m²)</p>
+                    <p><strong>B</strong> = Magnetic field strength (T)</p>
+                    <p><strong>A</strong> = Area of surface (m²)</p>
+                    <p><strong>θ</strong> = Angle between B and normal to surface</p>
+                    <p><strong>Maximum flux when θ = 0° (field perpendicular to surface):</strong> Φ = BA</p>
+                    <p><strong>Zero flux when θ = 90° (field parallel to surface):</strong> Φ = 0</p>
+                </div>
+
+                <h3>Example 1: Magnetic Flux Through a Loop</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A square loop with area 0.04 m² is placed in a uniform magnetic field of 0.5 T. The field makes an angle of 30° with the normal to the loop. What is the magnetic flux?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    Φ = BA cos(θ)<br>
+                    Φ = (0.5 T)(0.04 m²) cos(30°)<br>
+                    Φ = (0.02)(0.866)<br>
+                    Φ = 0.0173 Wb ≈ 17.3 mWb<br>
+                    <br>
+                    The magnetic flux through the loop is about 17.3 millwebers.
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Faraday's Law of Induction</h2>
+                <p><strong>Definition:</strong> A changing magnetic flux through a loop induces an electromotive force (EMF) in the loop.</p>
+                
+                <div class="law-box">
+                    ε = -dΦ/dt<br>
+                    <br>
+                    (The induced EMF equals the negative rate of change of magnetic flux)
+                </div>
+
+                <h3>Key Points:</h3>
+                <ul>
+                    <li>EMF is induced whenever magnetic flux through the loop changes</li>
+                    <li>The negative sign indicates the direction (related to Lenz's Law)</li>
+                    <li>Flux can change by: changing B, changing A, or changing angle θ</li>
+                    <li>Larger rate of change → Larger induced EMF</li>
+                </ul>
+
+                <h3>For a Coil with N Turns:</h3>
+                <div class="formula-box">
+                    ε = -N(dΦ/dt)
+                </div>
+
+                <h3>Example 2: Induced EMF from Changing Flux</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A circular loop has an area of 0.1 m². The magnetic field through it changes from 0.2 T to 0.8 T in 0.5 seconds. What is the average induced EMF?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    ε = -dΦ/dt = -A(dB/dt)<br>
+                    <br>
+                    ΔB = 0.8 - 0.2 = 0.6 T<br>
+                    Δt = 0.5 s<br>
+                    dB/dt = 0.6 / 0.5 = 1.2 T/s<br>
+                    <br>
+                    ε = -(0.1 m²)(1.2 T/s) = -0.12 V<br>
+                    <br>
+                    The magnitude of induced EMF is 0.12 V.
+                </div>
+
+                <h3>Example 3: Coil with Multiple Turns</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A coil with 50 turns, each with area 0.02 m², experiences a magnetic field change from 0 T to 0.4 T in 2 seconds. What is the induced EMF?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    ε = -N(dΦ/dt) = -N × A × (dB/dt)<br>
+                    <br>
+                    ε = -50 × 0.02 × (0.4 / 2)<br>
+                    ε = -50 × 0.02 × 0.2<br>
+                    ε = -0.2 V<br>
+                    <br>
+                    The magnitude of induced EMF is 0.2 V (50 times stronger than single loop due to N turns).
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Lenz's Law</h2>
+                <p><strong>Definition:</strong> The direction of the induced current is such that it opposes the change in magnetic flux that produced it.</p>
+                
+                <div class="law-box">
+                    The induced current creates a magnetic field that OPPOSES the flux change causing it.
+                </div>
+
+                <h3>How to Apply Lenz's Law:</h3>
+                <ol>
+                    <li>Identify whether external magnetic flux is increasing or decreasing</li>
+                    <li>Determine the direction of external field</li>
+                    <li>If flux is increasing: induced field opposes (points opposite direction)</li>
+                    <li>If flux is decreasing: induced field reinforces (points same direction)</li>
+                    <li>Use right-hand rule to find current direction from field direction</li>
+                </ol>
+
+                <h3>Example 4: Lenz's Law - Increasing Flux</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A magnet is pushed into a coil of wire. The north pole enters first. Using Lenz's Law, determine the direction of the induced current in the coil.
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    1. The magnetic flux through the coil is INCREASING (magnet entering)<br>
+                    2. External field points OUT of north pole (toward coil)<br>
+                    3. Induced current must create field pointing OPPOSITE (back toward magnet)<br>
+                    4. Induced field points INTO the coil (away from us, if looking at near side)<br>
+                    5. By right-hand rule: current flows CLOCKWISE (when viewed from magnet's perspective)<br>
+                    <br>
+                    The induced current creates a magnetic field that repels the incoming magnet (opposing the change).
+                </div>
+
+                <h3>Example 5: Lenz's Law - Decreasing Flux</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A magnet is pulled away from a coil. Using Lenz's Law, determine the direction of the induced current.
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    1. The magnetic flux through the coil is DECREASING (magnet leaving)<br>
+                    2. External field points OUT of north pole<br>
+                    3. Induced current must create field pointing SAME direction (to replace lost flux)<br>
+                    4. Induced field points OUT of coil<br>
+                    5. By right-hand rule: current flows COUNTERCLOCKWISE (when viewed from magnet)<br>
+                    <br>
+                    The induced current creates a magnetic field that attracts the departing magnet (opposing the change).
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Motional EMF - Moving Through a Magnetic Field</h2>
+                <p><strong>Definition:</strong> When a conductor moves through a magnetic field, an EMF is generated across its ends.</p>
+                
+                <div class="formula-box">
+                    ε = BLv<br>
+                    <br>
+                    (for conductor moving perpendicular to B field)
+                </div>
+
+                <h3>Parameters:</h3>
+                <div class="parameter-list">
+                    <p><strong>ε</strong> = Induced EMF (V)</p>
+                    <p><strong>B</strong> = Magnetic field strength (T)</p>
+                    <p><strong>L</strong> = Length of conductor in field (m)</p>
+                    <p><strong>v</strong> = Velocity of conductor (m/s)</p>
+                </div>
+
+                <h3>Physical Explanation:</h3>
+                <ul>
+                    <li>Moving conductor carries charges through magnetic field</li>
+                    <li>Lorentz force separates charges: positive and negative</li>
+                    <li>Charge separation creates potential difference (EMF)</li>
+                    <li>One end becomes positive, other becomes negative</li>
+                </ul>
+
+                <h3>Example 6: Rod Moving Through Magnetic Field</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A metal rod 0.3 m long moves at 4 m/s perpendicular through a 0.5 T magnetic field. What is the induced EMF across the rod?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    ε = BLv<br>
+                    ε = (0.5 T)(0.3 m)(4 m/s)<br>
+                    ε = 0.6 V<br>
+                    <br>
+                    The induced EMF across the rod is 0.6 V.
+                </div>
+
+                <h3>Example 7: Current in Closed Loop</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> The same rod from Example 6 moves through the field while sliding on parallel conducting rails separated by 0.3 m. If the total resistance of the circuit is 2 Ω, what is the induced current?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    ε = 0.6 V (from Example 6)<br>
+                    I = ε/R = 0.6 V / 2 Ω<br>
+                    I = 0.3 A<br>
+                    <br>
+                    The induced current is 0.3 A flowing through the circuit.
+                </div>
+            </section>
+
+            <section>
+                <h2>5. Transformers (Using Faraday's Law)</h2>
+                <p><strong>Definition:</strong> Transformers use Faraday's Law to transfer electrical energy between coils at different voltage levels.</p>
+                
+                <div class="formula-box">
+                    V_primary / V_secondary = N_primary / N_secondary<br>
+                    <br>
+                    V_p / V_s = N_p / N_s
+                </div>
+
+                <h3>Power Conservation (Ideal Transformer):</h3>
+                <div class="formula-box">
+                    I_primary × V_primary = I_secondary × V_secondary<br>
+                    <br>
+                    P_in = P_out (no power loss)
+                </div>
+
+                <h3>Example 8: Step-Down Transformer</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A transformer has 1000 turns on the primary coil and 100 turns on the secondary coil. The primary voltage is 120 V. What is the secondary voltage?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    V_p / V_s = N_p / N_s<br>
+                    120 / V_s = 1000 / 100<br>
+                    120 / V_s = 10<br>
+                    V_s = 12 V<br>
+                    <br>
+                    The secondary voltage is 12 V (stepped down from 120 V).
+                </div>
+
+                <h3>Example 9: Transformer Current</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> If the secondary coil draws 5 A at 12 V, what is the primary current (assuming ideal transformer with 100% efficiency)?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    P_primary = P_secondary<br>
+                    I_p × V_p = I_s × V_s<br>
+                    I_p × 120 = 5 × 12<br>
+                    I_p × 120 = 60<br>
+                    I_p = 0.5 A<br>
+                    <br>
+                    The primary current is 0.5 A (lower current at higher voltage).
+                </div>
+            </section>
+
+            <section>
+                <h2>6. Self-Inductance</h2>
+                <p><strong>Definition:</strong> When current in a coil changes, the coil creates a changing magnetic field that induces an EMF opposing the change (self-induced EMF).</p>
+                
+                <div class="formula-box">
+                    ε = -L(dI/dt)<br>
+                    <br>
+                    L = inductance (H or Henrys)<br>
+                    L = μ₀N²A/l (for solenoid)
+                </div>
+
+                <h3>Example 10: Self-Induced EMF</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A solenoid with inductance 0.5 H experiences a current change from 0 A to 10 A in 0.2 seconds. What is the self-induced EMF?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    ε = -L(dI/dt)<br>
+                    ε = -(0.5 H)(10 A / 0.2 s)<br>
+                    ε = -(0.5)(50)<br>
+                    ε = -25 V<br>
+                    <br>
+                    The magnitude of self-induced EMF is 25 V, opposing the current change.
+                </div>
+            </section>
+
+            <section>
+                <h2>Quick Reference: Induction Formulas</h2>
+                <div class="highlight-box">
+                    Φ = BA cos(θ) (magnetic flux)<br>
+                    ε = -dΦ/dt (Faraday's Law)<br>
+                    ε = -N(dΦ/dt) (N turns)<br>
+                    ε = BLv (motional EMF)<br>
+                    V_p/V_s = N_p/N_s (transformers)<br>
+                    ε = -L(dI/dt) (self-inductance)
+                </div>
+            </section>
+
+            <section>
+                <h2>Key Concepts Summary</h2>
+                <div class="highlight-box">
+                    <strong>Faraday's Law:</strong> Changing flux induces EMF<br>
+                    <strong>Lenz's Law:</strong> Induced current opposes the flux change<br>
+                    <strong>Motional EMF:</strong> Moving conductor through B field generates EMF<br>
+                    <strong>Transformers:</strong> Use Faraday's Law to change voltage levels<br>
+                    <strong>Self-Inductance:</strong> Coil opposes its own current changes
+                </div>
+            </section>
+
+            <div class="nav-buttons">
+                <a href="index.html">← Back to AP Physics EM</a>
+                <a href="magnetic-field-formulas.html">← Magnetic Fields</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vernoa. All rights reserved.</p>
+        <p><a href="../../../index.html">Home</a> | <a href="../../about.html">About</a> | <a href="../../contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>

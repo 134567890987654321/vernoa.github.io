@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Circuits: KCL, KVL, and Analysis - Kirchhoff's Laws, circuit analysis techniques, and problem-solving strategies for AP Physics C.">
+    <meta name="keywords" content="circuits, KCL, KVL, Kirchhoff, circuit analysis, current, voltage, resistance, physics">
+    <meta name="author" content="Vernoa">
+    <meta name="robots" content="index, follow">
+    
+    <title>Circuits: KCL, KVL, and Analysis - Vernoa</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="canonical" href="https://vernoa.github.io/notes/ap-physics-em/circuits/">
+    <style>
+        .highlight-box {
+            background: #f6f6f6;
+            padding: 1rem;
+            border-left: 4px solid #0645ad;
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .example-box {
+            background: #f0f8e8;
+            padding: 1rem;
+            border-left: 4px solid #228B22;
+            margin: 1rem 0;
+            border-radius: 0.25rem;
+        }
+        .formula-box {
+            background: #fff3cd;
+            padding: 1rem;
+            border-left: 4px solid #ff9800;
+            margin: 0.5rem 0;
+            font-family: 'Courier New', monospace;
+            border-radius: 0.25rem;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 1em;
+            margin: 2em 0;
+            flex-wrap: wrap;
+        }
+        .nav-buttons a {
+            padding: 0.75em 1.5em;
+            background-color: #f6f6f6;
+            border: 1px solid #a7d7f9;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #0645ad;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .nav-buttons a:hover {
+            background-color: #e8f0ff;
+        }
+        .parameter-list {
+            margin-left: 1.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+        table th, table td {
+            border: 1px solid #cccccc;
+            padding: 0.75em;
+            text-align: left;
+        }
+        table th {
+            background-color: #f6f6f6;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Vernoa</h1>
+            <ul>
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>🔌 Circuits: KCL, KVL, and Analysis</h1>
+            <p>Complete guide to circuit analysis using Kirchhoff's Laws and fundamental circuit principles.</p>
+
+            <section>
+                <h2>1. Ohm's Law</h2>
+                <p><strong>Definition:</strong> The relationship between voltage, current, and resistance in a circuit element.</p>
+                
+                <div class="formula-box">
+                    V = IR<br>
+                    I = V/R<br>
+                    R = V/I
+                </div>
+
+                <h3>Parameters:</h3>
+                <div class="parameter-list">
+                    <p><strong>V</strong> = Voltage (potential difference) across element (V)</p>
+                    <p><strong>I</strong> = Current through element (A)</p>
+                    <p><strong>R</strong> = Resistance of element (Ω)</p>
+                </div>
+
+                <h3>Example 1: Finding Current</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A resistor with resistance 100 Ω has a potential difference of 12 V across it. What is the current?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    I = V/R = 12 V / 100 Ω<br>
+                    I = 0.12 A = 120 mA<br>
+                    <br>
+                    The current through the resistor is 0.12 A.
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Kirchhoff's Current Law (KCL)</h2>
+                <p><strong>Definition:</strong> The sum of all currents entering a junction equals the sum of all currents leaving that junction. Based on conservation of charge.</p>
+                
+                <div class="formula-box">
+                    ΣI_in = ΣI_out<br>
+                    <br>
+                    (At any node: Σ I = 0)
+                </div>
+
+                <h3>Key Points:</h3>
+                <ul>
+                    <li>Current cannot accumulate at a junction</li>
+                    <li>Charge must be conserved</li>
+                    <li>Use when analyzing circuits with parallel branches</li>
+                    <li>Assign current directions; if negative, current flows opposite direction</li>
+                </ul>
+
+                <h3>Example 2: KCL at a Junction</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> At a junction, 3 A enters from the left and 1 A enters from above. How much current must leave through the right branch?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    I_in = I_out<br>
+                    3 A + 1 A = I_right<br>
+                    I_right = 4 A<br>
+                    <br>
+                    4 A must leave through the right branch.
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Kirchhoff's Voltage Law (KVL)</h2>
+                <p><strong>Definition:</strong> The sum of all potential differences around any closed loop in a circuit equals zero. Based on conservation of energy.</p>
+                
+                <div class="formula-box">
+                    ΣV = 0 (around any closed loop)<br>
+                    <br>
+                    Or: ΣV_emf = ΣV_resistors
+                </div>
+
+                <h3>Sign Conventions:</h3>
+                <ul>
+                    <li>When moving through a battery from - to + terminal: add the emf</li>
+                    <li>When moving through a battery from + to - terminal: subtract the emf</li>
+                    <li>When moving through a resistor in direction of current: subtract IR</li>
+                    <li>When moving through a resistor against current: add IR</li>
+                </ul>
+
+                <h3>Example 3: Single Loop Circuit (KVL)</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A 12 V battery is connected to three resistors in series: 2 Ω, 3 Ω, and 5 Ω. Find the current in the circuit.
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    Total resistance: R_total = 2 + 3 + 5 = 10 Ω<br>
+                    <br>
+                    Using Ohm's Law:<br>
+                    I = V/R = 12 V / 10 Ω = 1.2 A<br>
+                    <br>
+                    Using KVL (verification):<br>
+                    12 - (1.2)(2) - (1.2)(3) - (1.2)(5) = 0<br>
+                    12 - 2.4 - 3.6 - 6 = 0 ✓<br>
+                    <br>
+                    The current is 1.2 A.
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Series and Parallel Resistors</h2>
+
+                <h3>Series Resistors:</h3>
+                <div class="formula-box">
+                    R_total = R₁ + R₂ + R₃ + ...<br>
+                    (Same current through all resistors)
+                </div>
+
+                <h3>Parallel Resistors:</h3>
+                <div class="formula-box">
+                    1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...<br>
+                    (Same voltage across all resistors)
+                </div>
+
+                <h3>Example 4: Parallel Resistors</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> Three resistors of 6 Ω, 3 Ω, and 2 Ω are connected in parallel. What is the equivalent resistance?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    1/R_eq = 1/6 + 1/3 + 1/2<br>
+                    1/R_eq = 1/6 + 2/6 + 3/6 = 6/6 = 1<br>
+                    R_eq = 1 Ω<br>
+                    <br>
+                    The equivalent resistance is 1 Ω.
+                </div>
+            </section>
+
+            <section>
+                <h2>5. Power in Circuits</h2>
+                
+                <div class="formula-box">
+                    P = IV = I²R = V²/R<br>
+                    <br>
+                    E = Pt (energy over time)
+                </div>
+
+                <h3>Parameters:</h3>
+                <div class="parameter-list">
+                    <p><strong>P</strong> = Power dissipated (W)</p>
+                    <p><strong>I</strong> = Current (A)</p>
+                    <p><strong>V</strong> = Voltage (V)</p>
+                    <p><strong>R</strong> = Resistance (Ω)</p>
+                    <p><strong>E</strong> = Energy (J)</p>
+                    <p><strong>t</strong> = Time (s)</p>
+                </div>
+
+                <h3>Example 5: Power in a Resistor</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A 10 W light bulb operates at 120 V. What is the current through it and its resistance?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    From P = IV:<br>
+                    I = P/V = 10 W / 120 V = 0.0833 A = 83.3 mA<br>
+                    <br>
+                    From R = V/I:<br>
+                    R = 120 V / 0.0833 A = 1440 Ω<br>
+                    <br>
+                    Or using P = V²/R:<br>
+                    R = V²/P = (120)² / 10 = 14400/10 = 1440 Ω ✓
+                </div>
+            </section>
+
+            <section>
+                <h2>6. Multi-Loop Circuit Analysis (System of Equations)</h2>
+                <p>For complex circuits with multiple loops, use KCL and KVL to set up a system of equations.</p>
+
+                <h3>Steps:</h3>
+                <ol>
+                    <li>Label all unknowns (currents in each branch)</li>
+                    <li>Apply KCL at junctions to relate currents</li>
+                    <li>Apply KVL around each independent loop</li>
+                    <li>Solve the system of equations</li>
+                </ol>
+
+                <h3>Example 6: Two-Loop Circuit</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> Two batteries (12 V and 8 V) and three resistors (2 Ω, 3 Ω, 4 Ω) form a circuit. Find the current through each resistor.
+                    <br><br>
+                    <strong>Setup:</strong> (This requires a circuit diagram, but conceptually:)<br>
+                    - Left loop: 12 V - 2I₁ - 3(I₁ - I₂) = 0<br>
+                    - Right loop: 8 V - 4I₂ - 3(I₂ - I₁) = 0<br>
+                    <br>
+                    <strong>Simplify:</strong><br>
+                    Loop 1: 12 = 5I₁ - 3I₂<br>
+                    Loop 2: 8 = -3I₁ + 7I₂<br>
+                    <br>
+                    <strong>Solve:</strong> (Using substitution or elimination)<br>
+                    I₁ ≈ 2.65 A, I₂ ≈ 1.86 A
+                </div>
+            </section>
+
+            <section>
+                <h2>7. Internal Resistance and EMF</h2>
+                
+                <div class="formula-box">
+                    V = ε - Ir (terminal voltage)<br>
+                    <br>
+                    ε = emf (electromotive force)<br>
+                    r = internal resistance of battery
+                </div>
+
+                <h3>Key Points:</h3>
+                <ul>
+                    <li>EMF (ε) is the ideal voltage the battery would produce with no internal resistance</li>
+                    <li>Terminal voltage (V) is less than EMF due to voltage drop across internal resistance</li>
+                    <li>The larger the current drawn, the larger the voltage drop</li>
+                </ul>
+
+                <h3>Example 7: Battery with Internal Resistance</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A battery with emf 12 V and internal resistance 0.5 Ω is connected to a 5 Ω external resistor. What is the terminal voltage?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    Total resistance: R_total = 0.5 + 5 = 5.5 Ω<br>
+                    Current: I = ε/R_total = 12 / 5.5 = 2.18 A<br>
+                    Terminal voltage: V = ε - Ir = 12 - (2.18)(0.5) = 12 - 1.09 = 10.91 V<br>
+                    <br>
+                    The terminal voltage is 10.91 V (less than the 12 V emf).
+                </div>
+            </section>
+
+            <section>
+                <h2>Quick Reference: Circuit Formulas</h2>
+                <div class="highlight-box">
+                    V = IR (Ohm's Law)<br>
+                    KCL: ΣI_in = ΣI_out<br>
+                    KVL: ΣV = 0<br>
+                    R_series = R₁ + R₂ + ...<br>
+                    1/R_parallel = 1/R₁ + 1/R₂ + ...<br>
+                    P = IV = I²R = V²/R<br>
+                    V = ε - Ir (internal resistance)
+                </div>
+            </section>
+
+            <div class="nav-buttons">
+                <a href="index.html">← Back to AP Physics EM</a>
+                <a href="electric-field-formulas.html">← Electric Fields</a>
+                <a href="magnetic-field-formulas.html">Magnetic Fields →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vernoa. All rights reserved.</p>
+        <p><a href="../../../index.html">Home</a> | <a href="../../about.html">About</a> | <a href="../../contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>
