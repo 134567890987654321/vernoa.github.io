@@ -398,6 +398,14 @@ footer {
 .highlight-box, .formula-box, .example-box {
     color: var(--text-color);
 }
+
+/* Make highlight-box text bold and more visible */
+.highlight-box {
+    font-weight: 600;
+    font-size: 1.05em;
+    color: var(--text-color);
+}
+
 .formula-box.panel--orange, .example-box.panel--orange, .panel--orange .formula-box, .panel--orange .example-box {
     box-shadow: 0 0 0 6px var(--panel-accent-orange);
 }
