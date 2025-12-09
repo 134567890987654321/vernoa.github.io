@@ -18,6 +18,11 @@
     --infobox-bg: #ffffff; /* quick facts / aside background - white */
     --panel-bg: #f3fbff; /* subtle bluish panel used for TOC and small callouts */
     --highlight-bg: #fff9e6; /* subtle yellow for highlights */
+    /* Panel accents */
+    --panel-accent-blue: #e6f4ff; /* light blue surround */
+    --panel-accent-green: #e8f9eb; /* light green surround */
+    --panel-accent-orange: #fff4e6; /* light orange surround */
+    --panel-border: rgba(100,130,200,0.18);
 }
 
 html {
@@ -358,6 +363,37 @@ footer {
     font-size: 0.95em;
 }
 
+/* Generic panel: white interior with a colored surround and title underline */
+.panel {
+    --panel-accent: var(--panel-accent-blue);
+    background-color: #fff;
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1em 0;
+    box-shadow: 0 0 0 4px var(--panel-accent);
+}
+.panel--green { --panel-accent: var(--panel-accent-green); }
+.panel--orange { --panel-accent: var(--panel-accent-orange); }
+.panel h2, .panel h3 { margin-top: 0; padding-bottom: 0.25rem; border-bottom: 2px solid var(--panel-accent); }
+.panel .panel-title { border-bottom: 2px solid var(--panel-accent); padding-bottom: 0.25rem; }
+
+/* Apply the panel visual to existing layout classes (infobox, toc, note-card, highlight-box, formula-box, example-box) */
+.toc, .infobox, .note-card, .highlight-box, .formula-box, .example-box, .parameter-list {
+    background-color: #fff; /* white interior */
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1em 0;
+    box-shadow: 0 0 0 6px var(--panel-accent-blue);
+}
+.formula-box.panel--orange, .example-box.panel--orange, .panel--orange .formula-box, .panel--orange .example-box {
+    box-shadow: 0 0 0 6px var(--panel-accent-orange);
+}
+.formula-box.panel--green, .example-box.panel--green, .panel--green .formula-box, .panel--green .example-box {
+    box-shadow: 0 0 0 6px var(--panel-accent-green);
+}
+
 @media (max-width: 768px) {
     .infobox {
         float: none;
@@ -472,7 +508,7 @@ footer {
 
 /* Table of Contents */
 .toc {
-    background-color: var(--panel-bg);
+    background-color: #fff; /* white interior for panel */
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 1.5em;

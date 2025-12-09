@@ -13,24 +13,24 @@
     <link rel="canonical" href="https://vernoa.github.io/notes/ap-physics-em/magnetic-induction/">
     <style>
         .highlight-box {
-            background: var(--highlight-bg);
+            background: #fff;
             padding: 1rem;
             border-left: 4px solid #0645ad;
             margin: 0.5rem 0;
             font-family: 'Courier New', monospace;
             font-size: 0.95rem;
             border-radius: 0.25rem;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+            /* inner shadow removed in favor of .panel surround */
         }
         .example-box {
-            background: #f0f8e8;
+            background: #fff;
             padding: 1rem;
             border-left: 4px solid #228B22;
             margin: 1rem 0;
             border-radius: 0.25rem;
         }
         .formula-box {
-            background: #fff3cd;
+            background: #fff;
             padding: 1rem;
             border-left: 4px solid #ff9800;
             margin: 0.5rem 0;
@@ -52,9 +52,11 @@
             flex-wrap: wrap;
         }
         .nav-buttons a {
-            padding: 0.75em 1.5em;
-            background-color: var(--panel-bg);
-            border: 1px solid var(--border-color);
+            padding: 0.5em 1em;
+            background-color: #fff;
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+            box-shadow: 0 0 0 3px var(--panel-accent-blue);
             border-radius: 4px;
             text-decoration: none;
             color: #0645ad;
@@ -91,7 +93,7 @@
                 <h2>1. Magnetic Flux</h2>
                 <p><strong>Definition:</strong> The measure of magnetic field passing through a surface.</p>
                 
-                <div class="formula-box">
+                <div class="formula-box panel panel--orange">
                     Φ = BA cos(θ)<br>
                     <br>
                     Φ = ∫B·dA (general form)
@@ -108,7 +110,7 @@
                 </div>
 
                 <h3>Example 1: Magnetic Flux Through a Loop</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> A square loop with area 0.04 m² is placed in a uniform magnetic field of 0.5 T. The field makes an angle of 30° with the normal to the loop. What is the magnetic flux?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -140,12 +142,12 @@
                 </ul>
 
                 <h3>For a Coil with N Turns:</h3>
-                <div class="formula-box">
+                <div class="formula-box panel panel--orange">
                     ε = -N(dΦ/dt)
                 </div>
 
                 <h3>Example 2: Induced EMF from Changing Flux</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> A circular loop has an area of 0.1 m². The magnetic field through it changes from 0.2 T to 0.8 T in 0.5 seconds. What is the average induced EMF?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -161,7 +163,7 @@
                 </div>
 
                 <h3>Example 3: Coil with Multiple Turns</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> A coil with 50 turns, each with area 0.02 m², experiences a magnetic field change from 0 T to 0.4 T in 2 seconds. What is the induced EMF?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -193,7 +195,7 @@
                 </ol>
 
                 <h3>Example 4: Lenz's Law - Increasing Flux</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> A magnet is pushed into a coil of wire. The north pole enters first. Using Lenz's Law, determine the direction of the induced current in the coil.
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -207,7 +209,7 @@
                 </div>
 
                 <h3>Example 5: Lenz's Law - Decreasing Flux</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> A magnet is pulled away from a coil. Using Lenz's Law, determine the direction of the induced current.
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -225,7 +227,7 @@
                 <h2>4. Motional EMF - Moving Through a Magnetic Field</h2>
                 <p><strong>Definition:</strong> When a conductor moves through a magnetic field, an EMF is generated across its ends.</p>
                 
-                <div class="formula-box">
+                <div class="formula-box panel panel--orange">
                     ε = BLv<br>
                     <br>
                     (for conductor moving perpendicular to B field)
@@ -248,7 +250,7 @@
                 </ul>
 
                 <h3>Example 6: Rod Moving Through Magnetic Field</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> A metal rod 0.3 m long moves at 4 m/s perpendicular through a 0.5 T magnetic field. What is the induced EMF across the rod?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -344,7 +346,7 @@
 
             <section>
                 <h2>Quick Reference: Induction Formulas</h2>
-                <div class="highlight-box">
+                <div class="highlight-box panel">
                     Φ = BA cos(θ) (magnetic flux)<br>
                     ε = -dΦ/dt (Faraday's Law)<br>
                     ε = -N(dΦ/dt) (N turns)<br>
@@ -356,7 +358,7 @@
 
             <section>
                 <h2>Key Concepts Summary</h2>
-                <div class="highlight-box">
+                <div class="highlight-box panel">
                     <strong>Faraday's Law:</strong> Changing flux induces EMF<br>
                     <strong>Lenz's Law:</strong> Induced current opposes the flux change<br>
                     <strong>Motional EMF:</strong> Moving conductor through B field generates EMF<br>
