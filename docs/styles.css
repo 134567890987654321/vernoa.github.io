@@ -390,6 +390,27 @@ footer {
     }
 }
 
+/* Two-column article layout for stable sidebar placement */
+.article-with-aside {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 1.5em;
+    align-items: start;
+}
+.article-with-aside .article-content {
+    min-width: 0; /* prevent content from overflowing */
+}
+.article-with-aside .infobox {
+    float: none; /* override float when used inside grid */
+    margin: 0; /* spacing is handled by the grid gap */
+}
+
+@media (max-width: 768px) {
+    .article-with-aside {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 480px) {
     nav ul {
         flex-direction: column;
