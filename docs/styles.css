@@ -23,6 +23,7 @@
     --panel-accent-green: #e8f9eb; /* light green surround */
     --panel-accent-orange: #fff4e6; /* light orange surround */
     --panel-border: rgba(100,130,200,0.18);
+    --muted-text: #6b7280; /* light gray for callouts and quote-like text */
 }
 
 html {
@@ -224,7 +225,7 @@ article blockquote {
     border-left: 3px solid var(--border-color);
     padding-left: 1.5em;
     margin: 1.5em 0;
-    color: #555;
+    color: var(--muted-text);
     font-style: italic;
 }
 
@@ -375,7 +376,7 @@ footer {
 }
 .panel--green { --panel-accent: var(--panel-accent-green); }
 .panel--orange { --panel-accent: var(--panel-accent-orange); }
-.panel h2, .panel h3 { margin-top: 0; padding-bottom: 0.25rem; border-bottom: 2px solid var(--panel-accent); }
+.panel h2, .panel h3 { margin-top: 0; padding-bottom: 0.25rem; border-bottom: 2px solid var(--panel-accent); color: var(--text-color); }
 .panel .panel-title { border-bottom: 2px solid var(--panel-accent); padding-bottom: 0.25rem; }
 
 /* Apply the panel visual to existing layout classes (infobox, toc, note-card, highlight-box, formula-box, example-box) */
@@ -387,11 +388,27 @@ footer {
     margin: 1em 0;
     box-shadow: 0 0 0 6px var(--panel-accent-blue);
 }
+
+/* Default muted text for navigation-like panels */
+.toc, .infobox, .note-card, .parameter-list {
+    color: var(--muted-text);
+}
+
+/* High-contrast text for content-heavy callouts */
+.highlight-box, .formula-box, .example-box {
+    color: var(--text-color);
+}
 .formula-box.panel--orange, .example-box.panel--orange, .panel--orange .formula-box, .panel--orange .example-box {
     box-shadow: 0 0 0 6px var(--panel-accent-orange);
 }
 .formula-box.panel--green, .example-box.panel--green, .panel--green .formula-box, .panel--green .example-box {
     box-shadow: 0 0 0 6px var(--panel-accent-green);
+}
+
+/* Make formula-box content high-contrast for better readability */
+.formula-box {
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
 }
 
 @media (max-width: 768px) {
