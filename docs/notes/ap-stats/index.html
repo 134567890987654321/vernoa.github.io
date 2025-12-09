@@ -19,9 +19,11 @@
             flex-wrap: wrap;
         }
         .nav-buttons a {
-            padding: 0.75em 1.5em;
-            background-color: #f6f6f6;
-            border: 1px solid #a7d7f9;
+            padding: 0.5em 1em;
+            background-color: #fff;
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+            box-shadow: 0 0 0 3px var(--panel-accent-blue);
             border-radius: 4px;
             text-decoration: none;
             color: #0645ad;
@@ -29,7 +31,8 @@
             transition: background-color 0.2s;
         }
         .nav-buttons a:hover {
-            background-color: #e8f0ff;
+            background-color: var(--primary-hover);
+            color: white;
         }
     </style>
 </head>
@@ -53,7 +56,7 @@
             <section class="posts-list">
                 <h2>Posts</h2>
                 
-                <div class="post">
+                <div class="post panel">
                     <h3><a href="sampling-distributions.html">Sampling Distributions: Essential Notes</a></h3>
                     <p class="post-meta">Quick reference guide</p>
                     <p class="post-summary">A comprehensive quick reference guide for sampling distributions, covering the Central Limit Theorem, sample means, proportions, and practical applications for statistics.</p>

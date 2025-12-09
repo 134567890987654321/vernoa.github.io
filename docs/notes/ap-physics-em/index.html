@@ -19,17 +19,19 @@
             flex-wrap: wrap;
         }
         .nav-buttons a {
-            padding: 0.75em 1.5em;
-            background-color: #f6f6f6;
-            border: 1px solid #a7d7f9;
-            border-radius: 4px;
+            padding: 0.5em 1em;
+            background-color: #fff;
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+            box-shadow: 0 0 0 3px var(--panel-accent-blue);
             text-decoration: none;
             color: #0645ad;
             font-weight: 500;
             transition: background-color 0.2s;
         }
         .nav-buttons a:hover {
-            background-color: #e8f0ff;
+            background-color: var(--primary-hover);
+            color: white;
         }
     </style>
 </head>
@@ -53,28 +55,28 @@
             <section class="posts-list">
                 <h2>Posts</h2>
                 
-                <div class="post">
+                <div class="post panel">
                     <h3><a href="electric-field-formulas.html">Electric Field Formulas</a></h3>
                     <p class="post-meta">Definitions and applications</p>
                     <p class="post-summary">Complete guide to electric field formulas including definitions, parameters, and worked examples for each fundamental equation.</p>
                     <a href="electric-field-formulas.html" class="read-more">Read More →</a>
                 </div>
 
-                <div class="post">
+                <div class="post panel">
                     <h3><a href="circuits.html">Circuits: KCL, KVL, and Analysis</a></h3>
                     <p class="post-meta">Circuit fundamentals</p>
                     <p class="post-summary">Essential circuit theory including Kirchhoff's Laws, circuit analysis techniques, and practical problem-solving strategies.</p>
                     <a href="circuits.html" class="read-more">Read More →</a>
                 </div>
 
-                <div class="post">
+                <div class="post panel">
                     <h3><a href="magnetic-field-formulas.html">Magnetic Field Formulas</a></h3>
                     <p class="post-meta">Magnetic field equations</p>
                     <p class="post-summary">Comprehensive coverage of magnetic field formulas, force calculations, and motion of charged particles in magnetic fields.</p>
                     <a href="magnetic-field-formulas.html" class="read-more">Read More →</a>
                 </div>
 
-                <div class="post">
+                <div class="post panel">
                     <h3><a href="magnetic-induction.html">Magnetic Induction & Faraday's Law</a></h3>
                     <p class="post-meta">Induced currents and EMF</p>
                     <p class="post-summary">Electromagnetic induction, Faraday's Law, Lenz's Law, and how moving through magnetic fields generates induced currents.</p>

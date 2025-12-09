@@ -19,17 +19,20 @@
             flex-wrap: wrap;
         }
         .nav-buttons a {
-            padding: 0.75em 1.5em;
-            background-color: #f6f6f6;
-            border: 1px solid #a7d7f9;
+            padding: 0.5em 1em;
+            background-color: #fff;
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+            box-shadow: 0 0 0 3px var(--panel-accent-blue);
             border-radius: 4px;
             text-decoration: none;
-            color: #0645ad;
+            color: var(--primary-color);
             font-weight: 500;
             transition: background-color 0.2s;
         }
         .nav-buttons a:hover {
-            background-color: #e8f0ff;
+            background-color: var(--primary-hover);
+            color: white;
         }
     </style>
 </head>
@@ -53,14 +56,14 @@
             <section class="posts-list">
                 <h2>Posts</h2>
                 
-                <div class="post">
+                <div class="post panel">
                     <h3><a href="fiscal-policy.html">Fiscal Policy: AP Macro Cheat-Sheet</a></h3>
                     <p class="post-meta">Complete reference guide</p>
                     <p class="post-summary">A complete cheat sheet for AP Macro fiscal policy covering all College Board testable concepts with no fluff—everything you need to know.</p>
                     <a href="fiscal-policy.html" class="read-more">Read More →</a>
                 </div>
 
-                <div class="post">
+                <div class="post panel">
                     <h3><a href="loanable-funds.html">Loanable Funds Market</a></h3>
                     <p class="post-meta">Supply and demand guide</p>
                     <p class="post-summary">Complete breakdown of the loanable funds market including supply components, demand components, and factors that shift each curve.</p>

@@ -13,24 +13,24 @@
     <link rel="canonical" href="https://vernoa.github.io/notes/ap-physics-em/circuits/">
     <style>
         .highlight-box {
-            background: #f6f6f6;
+            background: #fff;
             padding: 1rem;
             border-left: 4px solid #0645ad;
             margin: 0.5rem 0;
             font-family: 'Courier New', monospace;
             font-size: 0.95rem;
             border-radius: 0.25rem;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+            /* inner shadow removed in favor of .panel surround */
         }
         .example-box {
-            background: #f0f8e8;
+            background: #fff;
             padding: 1rem;
             border-left: 4px solid #228B22;
             margin: 1rem 0;
             border-radius: 0.25rem;
         }
         .formula-box {
-            background: #fff3cd;
+            background: #fff;
             padding: 1rem;
             border-left: 4px solid #ff9800;
             margin: 0.5rem 0;
@@ -44,9 +44,11 @@
             flex-wrap: wrap;
         }
         .nav-buttons a {
-            padding: 0.75em 1.5em;
-            background-color: #f6f6f6;
-            border: 1px solid #a7d7f9;
+            padding: 0.5em 1em;
+            background-color: #fff;
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+            box-shadow: 0 0 0 3px var(--panel-accent-blue);
             border-radius: 4px;
             text-decoration: none;
             color: #0645ad;
@@ -54,7 +56,8 @@
             transition: background-color 0.2s;
         }
         .nav-buttons a:hover {
-            background-color: #e8f0ff;
+            background-color: var(--primary-hover);
+            color: white;
         }
         .parameter-list {
             margin-left: 1.5rem;
@@ -70,7 +73,7 @@
             text-align: left;
         }
         table th {
-            background-color: #f6f6f6;
+            background-color: #fff;
             font-weight: 600;
         }
     </style>
@@ -96,7 +99,7 @@
                 <h2>1. Ohm's Law</h2>
                 <p><strong>Definition:</strong> The relationship between voltage, current, and resistance in a circuit element.</p>
                 
-                <div class="formula-box">
+                <div class="formula-box panel panel--orange">
                     V = IR<br>
                     I = V/R<br>
                     R = V/I
@@ -110,7 +113,7 @@
                 </div>
 
                 <h3>Example 1: Finding Current</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> A resistor with resistance 100 Ω has a potential difference of 12 V across it. What is the current?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -125,7 +128,7 @@
                 <h2>2. Kirchhoff's Current Law (KCL)</h2>
                 <p><strong>Definition:</strong> The sum of all currents entering a junction equals the sum of all currents leaving that junction. Based on conservation of charge.</p>
                 
-                <div class="formula-box">
+                <div class="formula-box panel panel--orange">
                     ΣI_in = ΣI_out<br>
                     <br>
                     (At any node: Σ I = 0)
@@ -140,7 +143,7 @@
                 </ul>
 
                 <h3>Example 2: KCL at a Junction</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> At a junction, 3 A enters from the left and 1 A enters from above. How much current must leave through the right branch?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -156,7 +159,7 @@
                 <h2>3. Kirchhoff's Voltage Law (KVL)</h2>
                 <p><strong>Definition:</strong> The sum of all potential differences around any closed loop in a circuit equals zero. Based on conservation of energy.</p>
                 
-                <div class="formula-box">
+                <div class="formula-box panel panel--orange">
                     ΣV = 0 (around any closed loop)<br>
                     <br>
                     Or: ΣV_emf = ΣV_resistors
@@ -171,7 +174,7 @@
                 </ul>
 
                 <h3>Example 3: Single Loop Circuit (KVL)</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> A 12 V battery is connected to three resistors in series: 2 Ω, 3 Ω, and 5 Ω. Find the current in the circuit.
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -192,19 +195,19 @@
                 <h2>4. Series and Parallel Resistors</h2>
 
                 <h3>Series Resistors:</h3>
-                <div class="formula-box">
+                <div class="formula-box panel panel--orange">
                     R_total = R₁ + R₂ + R₃ + ...<br>
                     (Same current through all resistors)
                 </div>
 
                 <h3>Parallel Resistors:</h3>
-                <div class="formula-box">
+                <div class="formula-box panel panel--orange">
                     1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...<br>
                     (Same voltage across all resistors)
                 </div>
 
                 <h3>Example 4: Parallel Resistors</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> Three resistors of 6 Ω, 3 Ω, and 2 Ω are connected in parallel. What is the equivalent resistance?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -219,7 +222,7 @@
             <section>
                 <h2>5. Power in Circuits</h2>
                 
-                <div class="formula-box">
+                <div class="formula-box panel panel--orange">
                     P = IV = I²R = V²/R<br>
                     <br>
                     E = Pt (energy over time)
@@ -236,7 +239,7 @@
                 </div>
 
                 <h3>Example 5: Power in a Resistor</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> A 10 W light bulb operates at 120 V. What is the current through it and its resistance?
                     <br><br>
                     <strong>Solution:</strong><br>
@@ -264,7 +267,7 @@
                 </ol>
 
                 <h3>Example 6: Two-Loop Circuit</h3>
-                <div class="example-box">
+                <div class="example-box panel panel--green">
                     <strong>Problem:</strong> Two batteries (12 V and 8 V) and three resistors (2 Ω, 3 Ω, 4 Ω) form a circuit. Find the current through each resistor.
                     <br><br>
                     <strong>Setup:</strong> (This requires a circuit diagram, but conceptually:)<br>
@@ -312,7 +315,7 @@
 
             <section>
                 <h2>Quick Reference: Circuit Formulas</h2>
-                <div class="highlight-box">
+                <div class="highlight-box panel">
                     V = IR (Ohm's Law)<br>
                     KCL: ΣI_in = ΣI_out<br>
                     KVL: ΣV = 0<br>

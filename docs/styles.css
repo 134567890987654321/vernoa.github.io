@@ -14,6 +14,16 @@
     --light-bg: #f6f6f6;
     --table-border: #cccccc;
     --accent-color: #f0ad4e;
+    /* New color tokens for panels and sidebar */
+    --infobox-bg: #ffffff; /* quick facts / aside background - white */
+    --panel-bg: #f3fbff; /* subtle bluish panel used for TOC and small callouts */
+    --highlight-bg: #fff9e6; /* subtle yellow for highlights */
+    /* Panel accents */
+    --panel-accent-blue: #e6f4ff; /* light blue surround */
+    --panel-accent-green: #e8f9eb; /* light green surround */
+    --panel-accent-orange: #fff4e6; /* light orange surround */
+    --panel-border: rgba(100,130,200,0.18);
+    --muted-text: #6b7280; /* light gray for callouts and quote-like text */
 }
 
 html {
@@ -114,7 +124,7 @@ main {
 
 /* Sidebar */
 aside {
-    background-color: var(--light-bg);
+    background-color: var(--infobox-bg);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 1.5em;
@@ -215,7 +225,7 @@ article blockquote {
     border-left: 3px solid var(--border-color);
     padding-left: 1.5em;
     margin: 1.5em 0;
-    color: #555;
+    color: var(--muted-text);
     font-style: italic;
 }
 
@@ -343,16 +353,70 @@ footer {
     font-size: 0.9em;
 }
 
-/* Infobox / Sidebar Info */
 .infobox {
-    background-color: var(--light-bg);
+    background-color: var(--infobox-bg);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 1.5em;
-    margin: 1em 0 1em 1em;
+    margin: 0;
     float: right;
     width: 300px;
     font-size: 0.95em;
+}
+
+/* Generic panel: white interior with a colored surround and title underline */
+.panel {
+    --panel-accent: var(--panel-accent-blue);
+    background-color: #fff;
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1em 0;
+    box-shadow: 0 0 0 4px var(--panel-accent);
+}
+.panel--green { --panel-accent: var(--panel-accent-green); }
+.panel--orange { --panel-accent: var(--panel-accent-orange); }
+.panel h2, .panel h3 { margin-top: 0; padding-bottom: 0.25rem; border-bottom: 2px solid var(--panel-accent); color: var(--text-color); }
+.panel .panel-title { border-bottom: 2px solid var(--panel-accent); padding-bottom: 0.25rem; }
+
+/* Apply the panel visual to existing layout classes (infobox, toc, note-card, highlight-box, formula-box, example-box) */
+.toc, .infobox, .note-card, .highlight-box, .formula-box, .example-box, .parameter-list {
+    background-color: #fff; /* white interior */
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1em 0;
+    box-shadow: 0 0 0 6px var(--panel-accent-blue);
+}
+
+/* Default muted text for navigation-like panels */
+.toc, .infobox, .note-card, .parameter-list {
+    color: var(--muted-text);
+}
+
+/* High-contrast text for content-heavy callouts */
+.highlight-box, .formula-box, .example-box {
+    color: var(--text-color);
+}
+
+/* Make highlight-box text bold and more visible */
+.highlight-box {
+    font-weight: 600;
+    font-size: 1.05em;
+    color: var(--text-color);
+}
+
+.formula-box.panel--orange, .example-box.panel--orange, .panel--orange .formula-box, .panel--orange .example-box {
+    box-shadow: 0 0 0 6px var(--panel-accent-orange);
+}
+.formula-box.panel--green, .example-box.panel--green, .panel--green .formula-box, .panel--green .example-box {
+    box-shadow: 0 0 0 6px var(--panel-accent-green);
+}
+
+/* Make formula-box content high-contrast for better readability */
+.formula-box {
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
 }
 
 @media (max-width: 768px) {
@@ -393,12 +457,14 @@ footer {
 /* Two-column article layout for stable sidebar placement */
 .article-with-aside {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    /* slightly adjust columns so the content column is narrower */
+    grid-template-columns: 1fr 300px;
     gap: 1.5em;
     align-items: start;
 }
 .article-with-aside .article-content {
     min-width: 0; /* prevent content from overflowing */
+    max-width: 640px; /* cap main content width so it doesn't push the infobox */
 }
 .article-with-aside .infobox {
     float: none; /* override float when used inside grid */
@@ -434,6 +500,17 @@ footer {
     }
 }
 
+.highlight-box {
+    background: #fff;
+    padding: 1rem;
+    border-left: 4px solid var(--panel-accent-blue);
+    margin: 0.5rem 0;
+    font-family: inherit;
+    font-size: 1.05rem;
+    border-radius: 0.25rem;
+    box-shadow: none;
+}
+
 /* Utility Classes */
 .container {
     max-width: 900px;
@@ -456,7 +533,7 @@ footer {
 
 /* Table of Contents */
 .toc {
-    background-color: var(--light-bg);
+    background-color: #fff; /* white interior for panel */
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 1.5em;
