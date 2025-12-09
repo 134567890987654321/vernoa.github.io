@@ -76,10 +76,76 @@
     <main>
         <article>
             <h1>🧲 Magnetic Field Formulas</h1>
-            <p>Complete guide to magnetic field equations, force calculations, and motion of charged particles.</p>
+            <p>Complete guide to magnetic field equations, field generation, and force calculations on charged particles.</p>
 
             <section>
-                <h2>1. Lorentz Force on a Moving Charge</h2>
+                <h2>1. Magnetic Field from a Current-Carrying Wire</h2>
+                <p><strong>Definition:</strong> A current-carrying wire produces a magnetic field around it.</p>
+                
+                <div class="formula-box">
+                    B = (μ₀I)/(2πr)<br>
+                    <br>
+                    μ₀ = permeability of free space = 4π × 10⁻⁷ T⋅m/A
+                </div>
+
+                <h3>Direction (Right-Hand Rule):</h3>
+                <ul>
+                    <li>Point thumb in direction of current</li>
+                    <li>Fingers curl in direction of magnetic field lines</li>
+                    <li>Field forms concentric circles around the wire</li>
+                </ul>
+
+                <h3>Example 1: Magnetic Field Near a Wire</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> What is the magnetic field at a distance of 5 cm from a long straight wire carrying 10 A of current?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    B = (μ₀I)/(2πr)<br>
+                    B = (4π × 10⁻⁷ T⋅m/A)(10 A) / [2π(0.05 m)]<br>
+                    B = (4 × 10⁻⁶) / (0.1)<br>
+                    B = 4 × 10⁻⁵ T = 40 μT<br>
+                    <br>
+                    The magnetic field is 40 microTesla.
+                </div>
+            </section>
+
+            <section>
+                <h2>2. Magnetic Field in a Solenoid</h2>
+                <p><strong>Definition:</strong> A coil of wire wound tightly produces a uniform magnetic field inside.</p>
+                
+                <div class="formula-box">
+                    B = μ₀nI = μ₀NI/L<br>
+                    <br>
+                    n = N/L = number of turns per unit length
+                </div>
+
+                <h3>Parameters:</h3>
+                <div class="parameter-list">
+                    <p><strong>B</strong> = Magnetic field (T)</p>
+                    <p><strong>n</strong> = Number of turns per meter (m⁻¹)</p>
+                    <p><strong>N</strong> = Total number of turns</p>
+                    <p><strong>L</strong> = Length of solenoid (m)</p>
+                    <p><strong>I</strong> = Current (A)</p>
+                </div>
+
+                <h3>Example 2: Solenoid Magnetic Field</h3>
+                <div class="example-box">
+                    <strong>Problem:</strong> A solenoid has 500 turns over a length of 0.2 m and carries 3 A of current. What is the magnetic field inside?
+                    <br><br>
+                    <strong>Solution:</strong><br>
+                    n = N/L = 500 turns / 0.2 m = 2500 turns/m<br>
+                    <br>
+                    B = μ₀nI<br>
+                    B = (4π × 10⁻⁷ T⋅m/A)(2500 m⁻¹)(3 A)<br>
+                    B = (4π × 10⁻⁷)(2500)(3)<br>
+                    B = 3π × 10⁻³ T ≈ 0.0094 T = 9.4 mT<br>
+                    <br>
+                    The magnetic field inside is about 9.4 millitesla.
+                </div>
+            </section>
+
+            <section>
+                <h2>3. Lorentz Force on a Moving Charge</h2>
                 <p><strong>Definition:</strong> The force exerted on a charged particle moving through a magnetic field.</p>
                 
                 <div class="formula-box">
@@ -106,7 +172,7 @@
                     <li>For negative charge, force is opposite direction</li>
                 </ul>
 
-                <h3>Example 1: Force on Moving Electron</h3>
+                <h3>Example 3: Force on Moving Electron</h3>
                 <div class="example-box">
                     <strong>Problem:</strong> An electron moves at 5 × 10⁶ m/s perpendicular to a magnetic field of 0.5 T. What is the magnetic force?
                     <br><br>
@@ -121,7 +187,7 @@
             </section>
 
             <section>
-                <h2>2. Circular Motion in a Magnetic Field</h2>
+                <h2>4. Circular Motion in a Magnetic Field</h2>
                 <p><strong>Key Concept:</strong> When a charged particle moves perpendicular to a uniform magnetic field, it experiences a centripetal force and moves in a circular path.</p>
                 
                 <div class="formula-box">
@@ -142,7 +208,7 @@
                     <li>More highly charged particles move in smaller circles</li>
                 </ul>
 
-                <h3>Example 2: Radius of Circular Path</h3>
+                <h3>Example 4: Radius of Circular Path</h3>
                 <div class="example-box">
                     <strong>Problem:</strong> A proton moves at 3 × 10⁷ m/s perpendicular to a 0.2 T magnetic field. What is the radius of its circular path?
                     <br><br>
@@ -159,9 +225,9 @@
                     The proton moves in a circular path with radius 1.57 m.
                 </div>
 
-                <h3>Example 3: Period of Motion</h3>
+                <h3>Example 5: Period of Motion</h3>
                 <div class="example-box">
-                    <strong>Problem:</strong> What is the period of the proton's circular motion from Example 2?
+                    <strong>Problem:</strong> What is the period of the proton's circular motion from Example 4?
                     <br><br>
                     <strong>Solution:</strong><br>
                     T = 2πm/(qB)<br>
@@ -174,7 +240,7 @@
             </section>
 
             <section>
-                <h2>3. Magnetic Force on a Current-Carrying Wire</h2>
+                <h2>5. Magnetic Force on a Current-Carrying Wire</h2>
                 <p><strong>Definition:</strong> A conductor carrying current in a magnetic field experiences a force.</p>
                 
                 <div class="formula-box">
@@ -191,7 +257,7 @@
                     <p><strong>θ</strong> = Angle between wire and B field</p>
                 </div>
 
-                <h3>Example 4: Force on Current-Carrying Wire</h3>
+                <h3>Example 6: Force on Current-Carrying Wire</h3>
                 <div class="example-box">
                     <strong>Problem:</strong> A 50 cm wire carrying 2 A of current is placed perpendicular to a 0.8 T magnetic field. What is the magnetic force on the wire?
                     <br><br>
@@ -202,72 +268,6 @@
                     F = 0.8 N<br>
                     <br>
                     The magnetic force on the wire is 0.8 N.
-                </div>
-            </section>
-
-            <section>
-                <h2>4. Magnetic Field from a Current-Carrying Wire</h2>
-                <p><strong>Definition:</strong> A current-carrying wire produces a magnetic field around it.</p>
-                
-                <div class="formula-box">
-                    B = (μ₀I)/(2πr)<br>
-                    <br>
-                    μ₀ = permeability of free space = 4π × 10⁻⁷ T⋅m/A
-                </div>
-
-                <h3>Direction (Right-Hand Rule):</h3>
-                <ul>
-                    <li>Point thumb in direction of current</li>
-                    <li>Fingers curl in direction of magnetic field lines</li>
-                    <li>Field forms concentric circles around the wire</li>
-                </ul>
-
-                <h3>Example 5: Magnetic Field Near a Wire</h3>
-                <div class="example-box">
-                    <strong>Problem:</strong> What is the magnetic field at a distance of 5 cm from a long straight wire carrying 10 A of current?
-                    <br><br>
-                    <strong>Solution:</strong><br>
-                    B = (μ₀I)/(2πr)<br>
-                    B = (4π × 10⁻⁷ T⋅m/A)(10 A) / [2π(0.05 m)]<br>
-                    B = (4 × 10⁻⁶) / (0.1)<br>
-                    B = 4 × 10⁻⁵ T = 40 μT<br>
-                    <br>
-                    The magnetic field is 40 microTesla.
-                </div>
-            </section>
-
-            <section>
-                <h2>5. Magnetic Field in a Solenoid</h2>
-                <p><strong>Definition:</strong> A coil of wire wound tightly produces a uniform magnetic field inside.</p>
-                
-                <div class="formula-box">
-                    B = μ₀nI = μ₀NI/L<br>
-                    <br>
-                    n = N/L = number of turns per unit length
-                </div>
-
-                <h3>Parameters:</h3>
-                <div class="parameter-list">
-                    <p><strong>B</strong> = Magnetic field (T)</p>
-                    <p><strong>n</strong> = Number of turns per meter (m⁻¹)</p>
-                    <p><strong>N</strong> = Total number of turns</p>
-                    <p><strong>L</strong> = Length of solenoid (m)</p>
-                    <p><strong>I</strong> = Current (A)</p>
-                </div>
-
-                <h3>Example 6: Solenoid Magnetic Field</h3>
-                <div class="example-box">
-                    <strong>Problem:</strong> A solenoid has 500 turns over a length of 0.2 m and carries 3 A of current. What is the magnetic field inside?
-                    <br><br>
-                    <strong>Solution:</strong><br>
-                    n = N/L = 500 turns / 0.2 m = 2500 turns/m<br>
-                    <br>
-                    B = μ₀nI<br>
-                    B = (4π × 10⁻⁷ T⋅m/A)(2500 m⁻¹)(3 A)<br>
-                    B = (4π × 10⁻⁷)(2500)(3)<br>
-                    B = 3π × 10⁻³ T ≈ 0.0094 T = 9.4 mT<br>
-                    <br>
-                    The magnetic field inside is about 9.4 millitesla.
                 </div>
             </section>
 
@@ -306,12 +306,12 @@
             <section>
                 <h2>Quick Reference: Magnetic Field Formulas</h2>
                 <div class="highlight-box">
+                    B = μ₀I/(2πr) (field from wire)<br>
+                    B = μ₀nI (field in solenoid)<br>
                     F = qvB sin(θ) (Lorentz force)<br>
                     r = mv/(qB) (circular motion radius)<br>
                     T = 2πm/(qB) (period)<br>
                     F = BIL sin(θ) (force on wire)<br>
-                    B = μ₀I/(2πr) (field from wire)<br>
-                    B = μ₀nI (field in solenoid)<br>
                     F/L = μ₀I₁I₂/(2πd) (force between wires)
                 </div>
             </section>
