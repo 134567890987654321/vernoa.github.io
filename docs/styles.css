@@ -14,6 +14,10 @@
     --light-bg: #f6f6f6;
     --table-border: #cccccc;
     --accent-color: #f0ad4e;
+    /* New color tokens for panels and sidebar */
+    --infobox-bg: #ffffff; /* quick facts / aside background - white */
+    --panel-bg: #f3fbff; /* subtle bluish panel used for TOC and small callouts */
+    --highlight-bg: #fff9e6; /* subtle yellow for highlights */
 }
 
 html {
@@ -114,7 +118,7 @@ main {
 
 /* Sidebar */
 aside {
-    background-color: var(--light-bg);
+    background-color: var(--infobox-bg);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 1.5em;
@@ -343,13 +347,12 @@ footer {
     font-size: 0.9em;
 }
 
-/* Infobox / Sidebar Info */
 .infobox {
-    background-color: var(--light-bg);
+    background-color: var(--infobox-bg);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 1.5em;
-    margin: 1em 0 1em 1em;
+    margin: 0;
     float: right;
     width: 300px;
     font-size: 0.95em;
@@ -393,12 +396,14 @@ footer {
 /* Two-column article layout for stable sidebar placement */
 .article-with-aside {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    /* slightly adjust columns so the content column is narrower */
+    grid-template-columns: 1fr 300px;
     gap: 1.5em;
     align-items: start;
 }
 .article-with-aside .article-content {
     min-width: 0; /* prevent content from overflowing */
+    max-width: 640px; /* cap main content width so it doesn't push the infobox */
 }
 .article-with-aside .infobox {
     float: none; /* override float when used inside grid */
@@ -434,6 +439,17 @@ footer {
     }
 }
 
+.highlight-box {
+    background: var(--highlight-bg);
+    padding: 1rem;
+    border-left: 4px solid var(--primary-color);
+    margin: 0.5rem 0;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
 /* Utility Classes */
 .container {
     max-width: 900px;
@@ -456,7 +472,7 @@ footer {
 
 /* Table of Contents */
 .toc {
-    background-color: var(--light-bg);
+    background-color: var(--panel-bg);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 1.5em;

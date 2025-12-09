@@ -20,8 +20,8 @@
         }
         .nav-buttons a {
             padding: 0.75em 1.5em;
-            background-color: #f6f6f6;
-            border: 1px solid #a7d7f9;
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
             border-radius: 4px;
             text-decoration: none;
             color: #0645ad;
@@ -29,12 +29,14 @@
             transition: background-color 0.2s;
         }
         .nav-buttons a:hover {
-            background-color: #e8f0ff;
+            background-color: var(--primary-hover);
+            color: white;
         }
-    </style>
-</head>
-<body>
-    <header>
+        .note-card {
+            padding: 1.5em;
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+        }
         <nav>
             <h1>Vernoa</h1>
             <ul>
