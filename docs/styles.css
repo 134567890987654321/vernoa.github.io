@@ -405,6 +405,9 @@ footer {
     font-size: 1.05em;
     color: var(--text-color);
 }
+.example-box {
+    font-weight: 600;
+}
 
 .formula-box.panel--orange, .example-box.panel--orange, .panel--orange .formula-box, .panel--orange .example-box {
     box-shadow: 0 0 0 6px var(--panel-accent-orange);
@@ -416,7 +419,58 @@ footer {
 /* Make formula-box content high-contrast for better readability */
 .formula-box {
     color: var(--text-color);
-    font-family: 'Courier New', monospace;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+/* Notes grid and note-card styles (moved from docs/notes/index.html) */
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    margin: 2em 0;
+}
+.note-card {
+    padding: 1.5em;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: box-shadow 0.2s;
+}
+.note-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.note-card h2 { margin-top: 0; border: none; padding: 0; }
+.note-card h2 a { color: var(--primary-color); text-decoration: none; }
+.note-card h2 a:hover { text-decoration: underline; }
+.note-card p { margin: 0.5em 0 1em 0; text-align: left; }
+.notes-grid .read-more { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.notes-grid .read-more:hover { text-decoration: underline; }
+
+/* Nav buttons (used across posts) */
+.nav-buttons {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin: 2em 0;
+}
+.nav-buttons a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    box-shadow: 0 0 0 3px var(--panel-accent-blue);
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+.nav-buttons a:hover {
+    background-color: var(--primary-hover);
+    color: #fff;
 }
 
 @media (max-width: 768px) {
