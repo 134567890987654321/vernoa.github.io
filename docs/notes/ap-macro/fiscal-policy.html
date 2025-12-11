@@ -18,17 +18,24 @@
             padding: 1rem;
             border-left: 4px solid #0645ad;
             margin: 0.5rem 0;
-            font-family: 'Courier New', monospace;
+            font-family: inherit;
             font-size: 1rem;
             border-radius: 0.25rem;
             /* inner inset shadow removed because .panel adds outer surround */
         }
         .logic-chain {
-            font-family: 'Courier New', monospace;
-            font-weight: 600;
+            font-family: inherit;
+            font-weight: 650;
             color: #0645ad;
             font-size: 0.95em;
             margin: 0.25em 0;
+            letter-spacing: 0.01em;
+        }
+        /* Normalize previously italic/bold-italic chains to regular text while preserving emphasis via color/weight */
+        .logic-chain em, .logic-chain i, .logic-chain strong {
+            font-style: normal;
+            font-weight: 700;
+            color: inherit;
         }
         .nav-buttons {
             display: flex;
@@ -69,7 +76,7 @@
     <main>
         <article>
             <h1>🏛️ Fiscal Policy: AP Macro Cheat-Sheet</h1>
-            <p><em>Everything College-Board can test; no fluff.</em></p>
+                <p><em style="font-style: normal; font-weight: 600;">Everything College-Board can test; no fluff.</em></p>
 
             <section>
                 <h2>1. Definition</h2>
@@ -99,7 +106,7 @@
 
             <section>
                 <h2>3. Multipliers</h2>
-                <p><em>Short-run Keynesian model; no PL change</em></p>
+                <p><em style="font-style: normal; font-weight: 600;">Short-run Keynesian model; no PL change</em></p>
                 <div class="highlight-box panel">
                     Govt Multiplier = 1 / (1 – MPC)
                 </div>
@@ -109,7 +116,7 @@
                 <div class="highlight-box panel">
                     Balanced-Budget Mult. = 1
                 </div>
-                <p><strong>Shift:</strong> AD moves horizontally by <em>(multiplier × initial fiscal shock)</em>.</p>
+                <p><strong>Shift:</strong> AD moves horizontally by <em style="font-style: normal; font-weight: 600;">(multiplier × initial fiscal shock)</em>.</p>
             </section>
 
             <section>
@@ -176,7 +183,7 @@
                 <p><strong>Recognition Lag:</strong> Time to identify the problem (e.g., recession)</p>
                 <p><strong>Implementation Lag:</strong> Time for legislation to pass and spending to begin</p>
                 <p><strong>Impact Lag:</strong> Time for fiscal stimulus to work through the economy</p>
-                <p><em>Total: Often 1–2 years. By then, the recession may have ended!</em></p>
+                <p><em style="font-style: normal; font-weight: 600;">Total: Often 1–2 years. By then, the recession may have ended!</em></p>
             </section>
 
             <section>
@@ -230,14 +237,16 @@
                 <ul>
                     <li><strong>AD–SRAS–LRAS:</strong> Show gap, fiscal shift (AD moves), new PL & Y.</li>
                     <li><strong>Loanable Funds:</strong> Deficit implies Demand for funds ↑ → Interest Rate (r) ↑.</li>
-                    <li><strong>Phillips Curve (Short Run):</strong> Fiscal policy causes movement <em>along</em> SRPC. LRPC is vertical.</li>
+                    <li><strong>Phillips Curve (Short Run):</strong> Fiscal policy causes movement <em style="font-style: normal; font-weight: 600;">along</em> SRPC. LRPC is vertical.</li>
                 </ul>
             </section>
 
             <div class="nav-buttons">
-                <a href="index.html">← Back to AP Macro</a>
-                <a href="loanable-funds.html">Next: Loanable Funds →</a>
-                <a href="../ap-stats/">View AP Statistics →</a>
+                    <div class="nav-buttons" style="display: flex; gap: 1em; margin: 2em 0; flex-wrap: wrap;">
+                        <a href="index.html">← Back to AP Macro</a>
+                        <a href="loanable-funds.html">Next Post: Loanable Funds Market →</a>
+                        <a href="../ap-stats/">View AP Statistics →</a>
+                    </div>
             </div>
         </article>
     </main>
