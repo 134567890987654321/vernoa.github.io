@@ -16,6 +16,7 @@
             margin-left: 1.5rem;
         }
     </style>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <header>
@@ -39,9 +40,9 @@
                 <p><strong>Definition:</strong> The measure of magnetic field passing through a surface.</p>
                 
                 <div class="formula-box panel">
-                    Φ = BA cos(θ)<br>
+                    \( \Phi = BA \cos(\theta) \)<br>
                     <br>
-                    Φ = ∫B·dA (general form)
+                    \( \Phi = \int \vec{B} \cdot d\vec{A} \) (general form)
                 </div>
 
                 <h3>Parameters:</h3>
@@ -73,7 +74,7 @@
                 <p><strong>Definition:</strong> A changing magnetic flux through a loop induces an electromotive force (EMF) in the loop.</p>
                 
                 <div class="law-box panel">
-                    ε = -dΦ/dt<br>
+                    \( \varepsilon = -\frac{d\Phi}{dt} \)<br>
                     <br>
                     (The induced EMF equals the negative rate of change of magnetic flux)
                 </div>
@@ -88,7 +89,7 @@
 
                 <h3>For a Coil with N Turns:</h3>
                 <div class="formula-box panel">
-                    ε = -N(dΦ/dt)
+                    \( \varepsilon = -N \frac{d\Phi}{dt} \)
                 </div>
 
                 <h3>Example 2: Induced EMF from Changing Flux</h3>
@@ -173,9 +174,9 @@
                 <p><strong>Definition:</strong> When a conductor moves through a magnetic field, an EMF is generated across its ends.</p>
                 
                 <div class="formula-box panel">
-                    ε = BLv<br>
+                    \( \varepsilon = BLv \)<br>
                     <br>
-                    (for conductor moving perpendicular to B field)
+                    (for conductor moving perpendicular to \( B \) field)
                 </div>
 
                 <h3>Parameters:</h3>
@@ -224,16 +225,16 @@
                 <p><strong>Definition:</strong> Transformers use Faraday's Law to transfer electrical energy between coils at different voltage levels.</p>
                 
                 <div class="formula-box">
-                    V_primary / V_secondary = N_primary / N_secondary<br>
+                    \( \frac{V_{\text{primary}}}{V_{\text{secondary}}} = \frac{N_{\text{primary}}}{N_{\text{secondary}}} \)<br>
                     <br>
-                    V_p / V_s = N_p / N_s
+                    \( \frac{V_p}{V_s} = \frac{N_p}{N_s} \)
                 </div>
 
                 <h3>Power Conservation (Ideal Transformer):</h3>
                 <div class="formula-box">
-                    I_primary × V_primary = I_secondary × V_secondary<br>
+                    \( I_{\text{primary}} V_{\text{primary}} = I_{\text{secondary}} V_{\text{secondary}} \)<br>
                     <br>
-                    P_in = P_out (no power loss)
+                    \( P_{\text{in}} = P_{\text{out}} \) (no power loss)
                 </div>
 
                 <h3>Example 8: Step-Down Transformer</h3>
@@ -269,10 +270,10 @@
                 <p><strong>Definition:</strong> When current in a coil changes, the coil creates a changing magnetic field that induces an EMF opposing the change (self-induced EMF).</p>
                 
                 <div class="formula-box">
-                    ε = -L(dI/dt)<br>
+                    \( \varepsilon = -L \frac{dI}{dt} \)<br>
                     <br>
-                    L = inductance (H or Henrys)<br>
-                    L = μ₀N²A/l (for solenoid)
+                    \( L \) = inductance (H or henrys)<br>
+                    \( L = \mu_{0} \frac{N^{2} A}{l} \) (for solenoid)
                 </div>
 
                 <h3>Example 10: Self-Induced EMF</h3>
@@ -292,12 +293,12 @@
             <section>
                 <h2>Quick Reference: Induction Formulas</h2>
                 <div class="highlight-box panel">
-                    Φ = BA cos(θ) (magnetic flux)<br>
-                    ε = -dΦ/dt (Faraday's Law)<br>
-                    ε = -N(dΦ/dt) (N turns)<br>
-                    ε = BLv (motional EMF)<br>
-                    V_p/V_s = N_p/N_s (transformers)<br>
-                    ε = -L(dI/dt) (self-inductance)
+                    \( \Phi = BA \cos \theta \) (magnetic flux)<br>
+                    \( \varepsilon = -\frac{d\Phi}{dt} \) (Faraday's Law)<br>
+                    \( \varepsilon = -N \frac{d\Phi}{dt} \) (N turns)<br>
+                    \( \varepsilon = BLv \) (motional EMF)<br>
+                    \( \frac{V_p}{V_s} = \frac{N_p}{N_s} \) (transformers)<br>
+                    \( \varepsilon = -L \frac{dI}{dt} \) (self-inductance)
                 </div>
             </section>
 

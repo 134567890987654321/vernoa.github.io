@@ -34,6 +34,7 @@
             color: white;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <header>
@@ -51,12 +52,12 @@
         <article class="article-with-aside">
             <div class="article-content">
                 <h1>🔢 Euler's Formula & Angle Identities</h1>
-                <p>Leverage <em>e<sup>i&#952;</sup> = cos &#952; + i sin &#952;</em> to derive classic trigonometric identities, including cosine addition and high-multiple-angle (高倍角的转化) formulas, all grounded in Taylor series intuition.</p>
+                <p>Leverage <em>\( e^{i\theta} = \cos \theta + i \sin \theta \)</em> to derive classic trigonometric identities, including cosine addition and high-multiple-angle (高倍角的转化) formulas, all grounded in Taylor series intuition.</p>
 
                 <section>
                     <h2>Euler's Formula in One Line</h2>
                     <div class="highlight-box panel">
-                        e<sup>i&#952;</sup> = cos &#952; + i sin &#952;
+                        \[ e^{i\theta} = \cos \theta + i \sin \theta \]
                     </div>
                     <p>The identity states that every point on the unit circle can be written as an exponential with imaginary argument. Real parts trace cosine, imaginary parts trace sine.</p>
                 </section>
@@ -65,18 +66,18 @@
                     <h2>Deriving Euler via Taylor Expansion</h2>
                     <p>The power-series definitions for the exponential, sine, and cosine functions are:</p>
                     <ul>
-                        <li>e<sup>x</sup> = 1 + x + x<sup>2</sup> / 2! + x<sup>3</sup> / 3! + &hellip;</li>
-                        <li>cos x = 1 - x<sup>2</sup> / 2! + x<sup>4</sup> / 4! - &hellip;</li>
-                        <li>sin x = x - x<sup>3</sup> / 3! + x<sup>5</sup> / 5! - &hellip;</li>
+                        <li>\( e^{x} = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \cdots \)</li>
+                        <li>\( \cos x = 1 - \frac{x^{2}}{2!} + \frac{x^{4}}{4!} - \cdots \)</li>
+                        <li>\( \sin x = x - \frac{x^{3}}{3!} + \frac{x^{5}}{5!} - \cdots \)</li>
                     </ul>
                     <div class="formula-box panel">
                         General Taylor series (about a):<br>
-                        f(x) = Σ<sub>n=0</sub><sup>∞</sup> f<sup>(n)</sup>(a) / n! · (x - a)<sup>n</sup><br>
-                        Maclaurin series (a = 0): f(x) = Σ<sub>n=0</sub><sup>∞</sup> f<sup>(n)</sup>(0) / n! · x<sup>n</sup>
+                        \( f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!} \cdot (x - a)^n \)<br>
+                        Maclaurin series (a = 0): \( f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!} \cdot x^n \)
                     </div>
                     <p>Plugging x = i&#952; into the exponential series and grouping even/odd powers produces</p>
                     <p>
-                        e<sup>i&#952;</sup> = (1 - &#952;<sup>2</sup> / 2! + &#952;<sup>4</sup> / 4! - &hellip;) + i (&#952; - &#952;<sup>3</sup> / 3! + &#952;<sup>5</sup> / 5! - &hellip;) = cos &#952; + i sin &#952;.
+                        \( e^{i\theta} = (1 - \theta^{2}/2! + \theta^{4}/4! - \cdots) + i(\theta - \theta^{3}/3! + \theta^{5}/5! - \cdots) = \cos \theta + i \sin \theta. \)
                     </p>
                     <p>The derivation shows that Euler's formula is simply the exponential series wearing complex numbers.</p>
                 </section>
@@ -94,29 +95,29 @@
                 <section>
                     <h2>Proving cos (a + b)</h2>
                     <ol>
-                        <li>Multiply exponentials: e<sup>i(a+b)</sup> = e<sup>ia</sup> e<sup>ib</sup>.</li>
-                        <li>Write each factor with Euler's formula: (cos a + i sin a)(cos b + i sin b).</li>
+                        <li>Multiply exponentials: \( e^{i(a+b)} = e^{ia} e^{ib} \).</li>
+                        <li>Write each factor with Euler's formula: \( (\cos a + i \sin a)(\cos b + i \sin b) \).</li>
                         <li>Expand and group real/imaginary parts:</li>
                     </ol>
                     <div class="formula-box panel">
-                        cos (a + b) = cos a cos b - sin a sin b<br>
-                        sin (a + b) = sin a cos b + cos a sin b
+                        \[ \cos (a + b) = \cos a \cos b - \sin a \sin b \]<br>
+                        \[ \sin (a + b) = \sin a \cos b + \cos a \sin b \]
                     </div>
                     <p>The exponential view compresses the algebra to one multiplication; extracting components yields the familiar addition rules.</p>
                 </section>
 
                 <section>
                     <h2>High-Multiple-Angle Transformations</h2>
-                    <p>De Moivre's theorem follows directly: (e<sup>i&#952;</sup>)<sup>n</sup> = e<sup>in&#952;</sup>. Converting back to trigonometric form gives</p>
+                    <p>De Moivre's theorem follows directly: \( (e^{i\theta})^{n} = e^{in\theta} \). Converting back to trigonometric form gives</p>
                     <div class="highlight-box panel">
-                        (cos &#952; + i sin &#952;)<sup>n</sup> = cos (n&#952;) + i sin (n&#952;)
+                        \[ (\cos \theta + i \sin \theta)^{n} = \cos (n\theta) + i \sin (n\theta) \]
                     </div>
                     <p>Therefore the coefficients in the binomial expansion of (cos &#952; + i sin &#952;)<sup>n</sup> provide formulas for cos (n&#952;) and sin (n&#952;) (the "high-multiple-angle" or 高倍角的转化 identities). Example for n = 4:</p>
                     <div class="formula-box panel">
-                        cos(4&#952;) = cos<sup>4</sup>&#952; - 6 cos<sup>2</sup>&#952; sin<sup>2</sup>&#952; + sin<sup>4</sup>&#952;<br>
-                        = 8 cos<sup>4</sup>&#952; - 8 cos<sup>2</sup>&#952; + 1 &nbsp;(using sin<sup>2</sup>&#952; = 1 - cos<sup>2</sup>&#952;)
+                        \[ \cos(4\theta) = \cos^{4} \theta - 6 \cos^{2} \theta \sin^{2} \theta + \sin^{4} \theta \]<br>
+                        \[ = 8 \cos^{4} \theta - 8 \cos^{2} \theta + 1 \quad (\text{using } \sin^{2} \theta = 1 - \cos^{2} \theta) \]
                     </div>
-                    <p>Similarly, the imaginary part gives sin(4&#952;) = 4 cos<sup>3</sup>&#952; sin&#952; - 4 cos&#952; sin<sup>3</sup>&#952;.</p>
+                    <p>Similarly, the imaginary part gives \( \sin(4\theta) = 4 \cos^{3} \theta \sin \theta - 4 \cos \theta \sin^{3} \theta \).</p>
                 </section>
 
                 <section>

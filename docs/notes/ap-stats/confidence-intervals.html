@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confidence intervals overview for AP Statistics including general structure, z and t intervals, and sample size planning.">
+    <meta name="keywords" content="statistics, confidence interval, AP stats, z interval, t interval, margin of error">
+    <meta name="author" content="Vernoa">
+    <meta name="robots" content="index, follow">
+
+    <title>Confidence Intervals - Vernoa</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="canonical" href="https://vernoa.github.io/notes/ap-stats/confidence-intervals.html">
+    <style>
+        .nav-buttons {
+            display: flex;
+            gap: 1em;
+            margin: 2em 0;
+            flex-wrap: wrap;
+        }
+        .nav-buttons a {
+            padding: 0.5em 1em;
+            background-color: #fff;
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+            box-shadow: 0 0 0 3px var(--panel-accent-blue);
+            text-decoration: none;
+            color: #0645ad;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .nav-buttons a:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+        .math {
+            font-family: "Georgia", "Times New Roman", serif;
+            font-style: italic;
+        }
+    </style>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Vernoa</h1>
+            <ul>
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>📊 Confidence Intervals: Essential Notes</h1>
+            <p>Use this guide to review how to build and interpret confidence intervals (CIs) for proportions and means, select the correct critical value, and plan studies so the margin of error meets exam or project requirements.</p>
+
+            <section>
+                <h2>1. The Normal Distribution</h2>
+                <p>The normal distribution, also known as the Gaussian distribution, is a symmetric, bell-shaped curve that describes many natural phenomena. It is defined by the formula:</p>
+                <div class="formula-box panel">
+                    \( f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} \)
+                </div>
+                <ul>
+                    <li><strong>Mean (μ):</strong> The center of the distribution.</li>
+                    <li><strong>Standard deviation (σ):</strong> Measures the spread of the distribution.</li>
+                    <li><strong>Common z* values:</strong> 90% → 1.645, 95% → 1.96, 99% → 2.576.</li>
+                </ul>
+                <p>The normal distribution is the foundation for many statistical methods, including confidence intervals and hypothesis testing.</p>
+            </section>
+
+            <section>
+                <h2>2. One-Proportion z-Interval</h2>
+                <p>Use when estimating a population proportion p.</p>
+                <div class="formula-box panel">
+                    \[ \hat{p} \pm z^{\ast} \times \sqrt{ \frac{\hat{p}(1 - \hat{p})}{n} } \]
+                </div>
+                <ul>
+                    <li><strong>Conditions:</strong> SRS, 10% (if no replacement), success/failure counts n·p̂ ≥ 10 and n·(1 - p̂) ≥ 10.</li>
+                    <li><strong>Critical values:</strong> 90% → 1.645, 95% → 1.96, 99% → 2.576.</li>
+                    <li><strong>Interpretation:</strong> "We are C% confident that the true population proportion lies between the interval bounds."</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Supplementary Topics</h2>
+                <h3>One-Mean t-Interval</h3>
+                <p>Use when estimating a population mean μ and σ is unknown (typical AP exam case).</p>
+                <div class="formula-box panel">
+                    \[ \bar{x} \pm t^{\ast} \times \frac{s}{\sqrt{n}} \]
+                </div>
+                <ul>
+                    <li><strong>Conditions:</strong> SRS, 10% (if sampling), and either population normal or n ≥ 30 (CLT). Inspect graphs for skew/outliers.</li>
+                    <li><strong>Degrees of freedom:</strong> df = n - 1, choose t* from table or calculator.</li>
+                    <li><strong>Interpretation:</strong> Same sentence template, but referencing the population mean.</li>
+                </ul>
+                <p>When σ is known (rare outside textbook exercises) replace s with σ and use z*.</p>
+
+                <h3>Difference Intervals (Two-Sample)</h3>
+                <p>Order the checklist twice—once for each sample—and also ensure independence between groups.</p>
+                <div class="formula-box panel">
+                    \[ (\text{Statistic}_1 - \text{Statistic}_2) \pm \text{Critical Value} \times \sqrt{(SE_1)^2 + (SE_2)^2} \]
+                </div>
+                <ul>
+                    <li><strong>Proportions:</strong> Replace SE with \( \sqrt{ \frac{\hat{p}_1(1 - \hat{p}_1)}{n_1} + \frac{\hat{p}_2(1 - \hat{p}_2)}{n_2} } \) and use \( z^{\ast} \).</li>
+                    <li><strong>Means:</strong> Use \( t^{\ast} \) with \( SE = \sqrt{ \frac{s_1^2}{n_1} + \frac{s_2^2}{n_2} } \). For AP Statistics, use calculator two-sample t procedures (with df from technology or conservative formula).</li>
+                </ul>
+            </section>
+
+            <div class="nav-buttons">
+                <a href="index.html">← Back to AP Statistics</a>
+                <a href="sampling-distributions.html">Next: Sampling Distributions →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vernoa. All rights reserved.</p>
+        <p><a href="../../../index.html">Home</a> | <a href="../../about.html">About</a> | <a href="../../contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>

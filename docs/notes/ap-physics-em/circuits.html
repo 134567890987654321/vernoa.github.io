@@ -16,6 +16,7 @@
             margin-left: 1.5rem;
         }
     </style>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <header>
@@ -39,9 +40,9 @@
                 <p><strong>Definition:</strong> The relationship between voltage, current, and resistance in a circuit element.</p>
 
                 <div class="formula-box panel">
-                    V = IR<br>
-                    I = V/R<br>
-                    R = V/I
+                    \( V = IR \)<br>
+                    \( I = \frac{V}{R} \)<br>
+                    \( R = \frac{V}{I} \)
                 </div>
 
                 <h3>Parameters:</h3>
@@ -68,9 +69,9 @@
                 <p><strong>Definition:</strong> The sum of all currents entering a junction equals the sum of all currents leaving that junction. Based on conservation of charge.</p>
 
                 <div class="formula-box panel">
-                    ΣI_in = ΣI_out<br>
+                    \( \sum I_{\text{in}} = \sum I_{\text{out}} \)<br>
                     <br>
-                    (At any node: Σ I = 0)
+                    \( \sum I = 0 \; \text{(at any node)} \)
                 </div>
 
                 <h3>Key Points:</h3>
@@ -99,9 +100,9 @@
                 <p><strong>Definition:</strong> The sum of all potential differences around any closed loop in a circuit equals zero. Based on conservation of energy.</p>
 
                 <div class="formula-box panel">
-                    ΣV = 0 (around any closed loop)<br>
+                    \( \sum V = 0 \; \text{(around any closed loop)} \)<br>
                     <br>
-                    Or: ΣV_emf = ΣV_resistors
+                    \( \sum V_{\text{emf}} = \sum V_{\text{resistors}} \)
                 </div>
 
                 <h3>Sign Conventions:</h3>
@@ -135,13 +136,13 @@
 
                 <h3>Series Resistors:</h3>
                 <div class="formula-box panel">
-                    R_total = R₁ + R₂ + R₃ + ...<br>
+                    \( R_{\text{total}} = R_1 + R_2 + R_3 + \cdots \)<br>
                     (Same current through all resistors)
                 </div>
 
                 <h3>Parallel Resistors:</h3>
                 <div class="formula-box panel">
-                    1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...<br>
+                    \( \frac{1}{R_{\text{total}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \cdots \)<br>
                     (Same voltage across all resistors)
                 </div>
 
@@ -162,9 +163,9 @@
                 <h2>5. Power in Circuits</h2>
 
                 <div class="formula-box panel">
-                    P = IV = I²R = V²/R<br>
+                    \( P = IV = I^{2}R = \frac{V^{2}}{R} \)<br>
                     <br>
-                    E = Pt (energy over time)
+                    \( E = Pt \) (energy over time)
                 </div>
 
                 <h3>Parameters:</h3>
@@ -226,10 +227,10 @@
                 <h2>7. Internal Resistance and EMF</h2>
 
                 <div class="formula-box panel">
-                    V = ε - Ir (terminal voltage)<br>
+                    \( V = \varepsilon - Ir \) (terminal voltage)<br>
                     <br>
-                    ε = emf (electromotive force)<br>
-                    r = internal resistance of battery
+                    \( \varepsilon \) = emf (electromotive force)<br>
+                    \( r \) = internal resistance of battery
                 </div>
 
                 <h3>Key Points:</h3>
@@ -255,13 +256,13 @@
             <section>
                 <h2>Quick Reference: Circuit Formulas</h2>
                 <div class="highlight-box panel">
-                    V = IR (Ohm's Law)<br>
-                    KCL: ΣI_in = ΣI_out<br>
-                    KVL: ΣV = 0<br>
-                    R_series = R₁ + R₂ + ...<br>
-                    1/R_parallel = 1/R₁ + 1/R₂ + ...<br>
-                    P = IV = I²R = V²/R<br>
-                    V = ε - Ir (internal resistance)
+                    \( V = IR \) (Ohm's Law)<br>
+                    KCL: \( \sum I_{\text{in}} = \sum I_{\text{out}} \)<br>
+                    KVL: \( \sum V = 0 \)<br>
+                    \( R_{\text{series}} = R_1 + R_2 + \cdots \)<br>
+                    \( \frac{1}{R_{\text{parallel}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots \)<br>
+                    \( P = IV = I^{2}R = \frac{V^{2}}{R} \)<br>
+                    \( V = \varepsilon - Ir \) (internal resistance)
                 </div>
             </section>
 
