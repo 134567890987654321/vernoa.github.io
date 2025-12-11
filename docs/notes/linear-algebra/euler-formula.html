@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Euler's formula derivations using Taylor series, cosine addition identity, and high-multiple-angle transformations.">
+    <meta name="keywords" content="euler formula, taylor series, cosine addition, multiple angle identity, linear algebra">
+    <meta name="author" content="Vernoa">
+    <meta name="robots" content="index, follow">
+
+    <title>Euler's Formula & Angle Identities - Vernoa</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="canonical" href="https://vernoa.github.io/notes/linear-algebra/euler-formula.html">
+    <style>
+        .nav-buttons {
+            display: flex;
+            gap: 1em;
+            margin: 2em 0;
+            flex-wrap: wrap;
+        }
+        .nav-buttons a {
+            padding: 0.5em 1em;
+            background-color: #fff;
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+            box-shadow: 0 0 0 3px var(--panel-accent-blue);
+            text-decoration: none;
+            color: #0645ad;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+        .nav-buttons a:hover {
+            background-color: var(--primary-hover);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Vernoa</h1>
+            <ul>
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="article-with-aside">
+            <div class="article-content">
+                <h1>🔢 Euler's Formula & Angle Identities</h1>
+                <p>Leverage <em>e<sup>i&#952;</sup> = cos &#952; + i sin &#952;</em> to derive classic trigonometric identities, including cosine addition and high-multiple-angle (高倍角的转化) formulas, all grounded in Taylor series intuition.</p>
+
+                <section>
+                    <h2>Euler's Formula in One Line</h2>
+                    <div class="highlight-box panel">
+                        e<sup>i&#952;</sup> = cos &#952; + i sin &#952;
+                    </div>
+                    <p>The identity states that every point on the unit circle can be written as an exponential with imaginary argument. Real parts trace cosine, imaginary parts trace sine.</p>
+                </section>
+
+                <section>
+                    <h2>Deriving Euler via Taylor Expansion</h2>
+                    <p>The power-series definitions for the exponential, sine, and cosine functions are:</p>
+                    <ul>
+                        <li>e<sup>x</sup> = 1 + x + x<sup>2</sup> / 2! + x<sup>3</sup> / 3! + &hellip;</li>
+                        <li>cos x = 1 - x<sup>2</sup> / 2! + x<sup>4</sup> / 4! - &hellip;</li>
+                        <li>sin x = x - x<sup>3</sup> / 3! + x<sup>5</sup> / 5! - &hellip;</li>
+                    </ul>
+                    <div class="formula-box panel">
+                        General Taylor series (about a):<br>
+                        f(x) = Σ<sub>n=0</sub><sup>∞</sup> f<sup>(n)</sup>(a) / n! · (x - a)<sup>n</sup><br>
+                        Maclaurin series (a = 0): f(x) = Σ<sub>n=0</sub><sup>∞</sup> f<sup>(n)</sup>(0) / n! · x<sup>n</sup>
+                    </div>
+                    <p>Plugging x = i&#952; into the exponential series and grouping even/odd powers produces</p>
+                    <p>
+                        e<sup>i&#952;</sup> = (1 - &#952;<sup>2</sup> / 2! + &#952;<sup>4</sup> / 4! - &hellip;) + i (&#952; - &#952;<sup>3</sup> / 3! + &#952;<sup>5</sup> / 5! - &hellip;) = cos &#952; + i sin &#952;.
+                    </p>
+                    <p>The derivation shows that Euler's formula is simply the exponential series wearing complex numbers.</p>
+                </section>
+
+                <section>
+                    <h2>Recovering Cosine & Sine</h2>
+                    <p>Taking real and imaginary parts gives immediate identities:</p>
+                    <ul>
+                        <li>cos &#952; equals the real part of e<sup>i&#952;</sup></li>
+                        <li>sin &#952; equals the imaginary part of e<sup>i&#952;</sup></li>
+                        <li>e<sup>-i&#952;</sup> = cos &#952; - i sin &#952;</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Proving cos (a + b)</h2>
+                    <ol>
+                        <li>Multiply exponentials: e<sup>i(a+b)</sup> = e<sup>ia</sup> e<sup>ib</sup>.</li>
+                        <li>Write each factor with Euler's formula: (cos a + i sin a)(cos b + i sin b).</li>
+                        <li>Expand and group real/imaginary parts:</li>
+                    </ol>
+                    <div class="formula-box panel">
+                        cos (a + b) = cos a cos b - sin a sin b<br>
+                        sin (a + b) = sin a cos b + cos a sin b
+                    </div>
+                    <p>The exponential view compresses the algebra to one multiplication; extracting components yields the familiar addition rules.</p>
+                </section>
+
+                <section>
+                    <h2>High-Multiple-Angle Transformations</h2>
+                    <p>De Moivre's theorem follows directly: (e<sup>i&#952;</sup>)<sup>n</sup> = e<sup>in&#952;</sup>. Converting back to trigonometric form gives</p>
+                    <div class="highlight-box panel">
+                        (cos &#952; + i sin &#952;)<sup>n</sup> = cos (n&#952;) + i sin (n&#952;)
+                    </div>
+                    <p>Therefore the coefficients in the binomial expansion of (cos &#952; + i sin &#952;)<sup>n</sup> provide formulas for cos (n&#952;) and sin (n&#952;) (the "high-multiple-angle" or 高倍角的转化 identities). Example for n = 4:</p>
+                    <div class="formula-box panel">
+                        cos(4&#952;) = cos<sup>4</sup>&#952; - 6 cos<sup>2</sup>&#952; sin<sup>2</sup>&#952; + sin<sup>4</sup>&#952;<br>
+                        = 8 cos<sup>4</sup>&#952; - 8 cos<sup>2</sup>&#952; + 1 &nbsp;(using sin<sup>2</sup>&#952; = 1 - cos<sup>2</sup>&#952;)
+                    </div>
+                    <p>Similarly, the imaginary part gives sin(4&#952;) = 4 cos<sup>3</sup>&#952; sin&#952; - 4 cos&#952; sin<sup>3</sup>&#952;.</p>
+                </section>
+
+                <section>
+                    <h2>Taylor Series Checks</h2>
+                    <p>Taylor expansions can verify the addition and multiple-angle formulas by differentiating e<sup>in&#952;</sup> with respect to &#952;:</p>
+                    <ul>
+                        <li>Derivatives cycle every four steps, mirroring the pattern of sine/cosine series.</li>
+                        <li>Expanding e<sup>in&#952;</sup> near &#952; = 0 produces polynomials whose real parts match the truncated series for cos (n&#952;).</li>
+                        <li>This approach justifies approximations for small angles: retain first non-zero term of the exponential series, then translate to cosine/sine.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Checklist</h2>
+                    <ul>
+                        <li>Start from Taylor: verify e<sup>i&#952;</sup> splits into cosine + i·sine.</li>
+                        <li>Use exponential multiplication to obtain addition rules.</li>
+                        <li>Apply De Moivre for any n to generate high-multiple-angle conversions.</li>
+                        <li>Translate results back to purely real expressions for exam use.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <aside class="infobox panel">
+                <h3>Quick Facts</h3>
+                <ul>
+                    <li><strong>Tool:</strong> Euler's formula</li>
+                    <li><strong>Core idea:</strong> Treat trig as exponential components</li>
+                    <li><strong>Identities:</strong> Addition, multiple-angle, series</li>
+                    <li><strong>Series check:</strong> Compare against Taylor terms</li>
+                    <li><strong>Use cases:</strong> Fast derivations in proofs & competitions</li>
+                </ul>
+            </aside>
+
+            <div class="nav-buttons">
+                <a href="index.html">← Back to Linear Algebra</a>
+                <a href="../index.html">View Notes Overview →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vernoa. All rights reserved.</p>
+        <p><a href="../../../index.html">Home</a> | <a href="../../about.html">About</a> | <a href="../../contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>
