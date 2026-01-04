@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AP Macro Chapter 12: Fractional reserve banking, T-accounts, and money multiplier leakages.">
+    <meta name="keywords" content="fractional reserve, money multiplier, T-accounts, AP Macro">
+    <meta name="author" content="Vernoa">
+    <meta name="robots" content="index, follow">
+
+    <title>Fractional Reserve Banking - Vernoa</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .nav-buttons { display: flex; gap: 1em; margin: 2em 0; flex-wrap: wrap; }
+        .nav-buttons a { padding: 0.5em 1em; background: #fff; border: 1px solid var(--panel-border); box-shadow: 0 0 0 3px var(--panel-accent-blue); border-radius: 6px; text-decoration: none; color: var(--primary-color); font-weight: 500; transition: background-color 0.2s; }
+        .nav-buttons a:hover { background-color: var(--primary-hover); color: #fff; }
+        .taccount { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Vernoa</h1>
+            <ul>
+                <li><a href="../../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Chapter 12 · Fractional Reserve Banking & the Money Multiplier</h1>
+            <p>Banks keep only a fraction of deposits on hand. The rest cycles into loans, deposits, and new money—unless leakages slow the process.</p>
+
+            <section>
+                <h2>Key Definitions</h2>
+                <ul>
+                    <li><strong>Required Reserves (RR):</strong> Minimum deposits banks must hold to meet withdrawals.</li>
+                    <li><strong>Excess Reserves (ER):</strong> Deposits above the requirement; fuel new loans.</li>
+                    <li><strong>Fractional Reserve System:</strong> Allows banks to lend more than the reserves they hold.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>T-Accounts</h2>
+                <div class="taccount">
+                    <div class="panel">
+                        <h3>Assets</h3>
+                        <ul>
+                            <li>Reserves</li>
+                            <li>Loans</li>
+                            <li>Securities</li>
+                        </ul>
+                    </div>
+                    <div class="panel">
+                        <h3>Liabilities</h3>
+                        <ul>
+                            <li>Deposits</li>
+                            <li>Borrowings</li>
+                            <li>Equity</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>AP FRQs frequently ask you to update a bank's T-account after deposits, withdrawals, or new loans.</p>
+            </section>
+
+            <section>
+                <h2>Money Multiplier Mechanics</h2>
+                <ul>
+                    <li>Each new loan becomes a deposit elsewhere, expanding M1.</li>
+                    <li>Lower RR → more lending → larger multiplier.</li>
+                    <li>Banks may hold <strong>precautionary reserves</strong>, shrinking the actual multiplier relative to the simple formula.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Leakages that Reduce the Multiplier</h2>
+                <ul>
+                    <li><strong>Cash Drain:</strong> Public holds more currency, leaving fewer deposits to multiply.</li>
+                    <li><strong>Excess Reserves:</strong> Banks sit on liquidity instead of lending.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Ample vs Limited Reserves Regimes</h2>
+                <ul>
+                    <li><strong>Ample reserves:</strong> Banks already hold excess cash; changes in RR/ER affect behavior, but interest on reserves becomes the primary tool.</li>
+                    <li><strong>Limited reserves:</strong> The Fed must supply or drain reserves to hit interest-rate targets; small changes move market rates.</li>
+                </ul>
+            </section>
+
+            <div class="nav-buttons">
+                <a href="money-and-aggregates.html">← Previous: Money & Aggregates</a>
+                <a href="fed-policy-tools.html">Next Chapter: Fed Policy Tools →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vernoa. All rights reserved.</p>
+        <p><a href="../../../index.html">Home</a> | <a href="../../about.html">About</a> | <a href="../../contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>
